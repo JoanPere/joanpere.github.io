@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!-->
-<html lang="en">
+<html lang="es">
 <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
@@ -143,7 +145,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<h1 id="about" class="title text-center">Sobre <span>Joan Pere</span></h1>
-						<p class="lead text-center">Ingeniero Cartógrafo y un perfil bastante developer. Me adapto muy bien, y tengo mucha resiliencia. Me gusta aportar y sumar; trabajar en grupo y también poder dirigirlo.</p>
+						<p class="lead text-center">Ingeniero Cartógrafo con un perfil bastante developer. Adaptativo y resiliente. Me gusta aportar y sumar; trabajar en grupo y también poder dirigirlo.</p>
 						<div class="space"></div>
 						<div class="row">
 							<div class="col-md-6">
@@ -151,7 +153,7 @@
 								<div class="space"></div>
 							</div>
 							<div class="col-md-6">
-								<p>Me gustan los <b><font color="#429DF2">retos</font></b> y no me importa <b><font color="#429DF2">salir de mi zona de confort</font></b>. Creo que uno tiene que estar siempre reciclándose y en <b><font color="#429DF2">constante aprendizaje</font></b>. Se puede <b><font color="#429DF2">aprender de todo el mundo</font></b> ya que siempre habrá alguien que haga alguna cosa mejor que tu.</p>
+								<p>Me gustan los <b><font color="#429DF2">retos</font></b> y no me importa <b><font color="#429DF2">salir de mi zona de confort</font></b>. Creo en el <b><font color="#429DF2">constante aprendizaje, reciclaje y crecimiento personal y profesional</font></b>. Se puede <b><font color="#429DF2">aprender de todo el mundo</font></b> ya que siempre habrá alguien que haga alguna cosa mejor que tu.</p>
 								<p>Algunas de las citas que más me gustan son:</p>
 								<ul class="list-unstyled">
 									<li><i class="fa fa-caret-right pr-10 text-colored"></i><i>"Las oportunidades no son producto de la casualidad, más bien son el resultado del trabajo" </i>(Tonatihu)</li>
@@ -237,7 +239,7 @@
 										</div>
 										<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
 											<div class="panel-body">
-												Durante tres años tube la oportunidad de dirigir la escuela de música de Nules. Esta experiencia me enriqueció mucho, ya que me dio la oportunidad de liderar un equipo de 17 personas y a la vez tener gente por arriba que te manda.<p>
+												Durante tres años tuve la oportunidad de dirigir la Escuela de Música de Nules. Esta experiencia me enriqueció mucho, ya que me dió la oportunidad de liderar un equipo de 17 personas y a la vez tener gente por arriba que te manda.<p>
 												Entre las cosas importantes que se hicieron durante mi periodo como director destacar: pasar a ser una escuela oficial, es decir, tener a todo el personal con contrato; aumentar un 300% la matrícula de nuevos alumnos; cambiar la imagen que se tenía de la escuela de música, tanto desde instituciones locales como desde los propios ciudadanos y padres del alumnado.
 											</div>
 										</div>
@@ -1102,9 +1104,93 @@
 								</ul>
 							</div>
 						</div>
+
+<?php
+
+include 'recaptchalib.php';
+$publickey = "6Ld_2f4SAAAAACXsn7ORlvcr3ouBPlDbo9oueDyL";
+$privatekey = "6Ld_2f4SAAAAAADyUVlsoQSt0rB-QjOC7pp3BwxX";
+
+//datos para enviar el email
+$para = 'joanperenules@gmail.com';
+$asunto = 'Consulta - Formulario WEB';
+ 
+//If somebody has posted data, we run verification
+if ( isset($_POST['name']) ) { 
+	 
+	//Captcha Validation
+	$resp = recaptcha_check_answer ($privatekey, $_SERVER["REMOTE_ADDR"], $_POST["recaptcha_challenge_field"],$_POST["recaptcha_response_field"]);
+	if (!$resp->is_valid) {
+	if ( $resp->error=='incorrect-captcha-sol' ) $errors[] = 'El captcha que se ha introducido es incorrecto. Por favor pruebe de nuevo.';
+	else $errors[] = $resp->error;
+	}
+	 
+	//Se comprueba que no tiene errores para enviar el email
+	if ( !isset($errors) ) {
+		//Se redacta el mensaje	
+		$mensaje = "Nombre: " . $_POST['name'] . "\r\n";
+		//$mensaje .= "Apellidos: " . $_POST['apellidos'] . "\r\n";
+		//$mensaje .= "Empresa: " . $_POST['empresa'] . " \r\n";
+		//$mensaje .= "Teléfono: " . $_POST['telefono'] . " \r\n";
+		$mensaje .= "Email: " . $_POST['email'] . " \r\n";
+		$mensaje .= "Mensaje: " . $_POST['message'] . " \r\n";
+		$mensaje .= "Enviado el " . date('d/m/Y', time());		 
+
+		//Se crea la informacion que nos llegará del remitente
+		$header = 'From: ' . $email . " \r\n";
+		$header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
+		$header .= "Mime-Version: 1.0 \r\n";
+		$header .= "Content-Type: text/plain";
+		 
+		//Enviar el email
+		if(mail($para, $asunto, utf8_decode($mensaje), $header)){
+			header('Location: index.html');
+		} else {
+			echo '<script language="javascript">';
+			echo 'alert("Fallo al enviar el formulario, vuelve a intentarlo por favor")';
+			echo '</script>';
+
+			header('Location: index.html');
+		}
+	}
+}
+
+
+
+?>
+
+
+
+
 						<div class="col-sm-6">
 							<div class="footer-content">
-								<form role="form" id="footer-form">
+								<form role="form" id="footer-form" name="contacto" action="" method="POST">
+								
+									<div class="form-group has-feedback">
+										<label class="sr-only" for="name">Name</label>
+										<input type="text" class="form-control" id="name" placeholder="Name" name="name" required >
+										<i class="fa fa-user form-control-feedback"></i>
+									</div>
+									<div class="form-group has-feedback">
+										<label class="sr-only" for="email">Email address</label>
+										<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required >
+										<i class="fa fa-envelope form-control-feedback"></i>
+									</div>
+									<div class="form-group has-feedback">
+										<label class="sr-only" for="message">Message</label>
+										<textarea class="form-control" rows="8" id="message" placeholder="Message" name="message" required></textarea>
+										<i class="fa fa-pencil form-control-feedback"></i>
+									</div>
+									<?php												
+											echo "<center>" .recaptcha_get_html($publickey)."</center>";
+										?>
+									<input type="submit" value="Send" class="btn btn-default">
+								</form>
+							</div>
+						</div>
+						<!-- <div class="col-sm-6">
+							<div class="footer-content">
+								<form role="form" id="footer-form" name="contacto" action="enviado.php" method="POST">
 								
 									<div class="form-group has-feedback">
 										<label class="sr-only" for="name2">Name</label>
@@ -1124,7 +1210,7 @@
 									<input type="submit" value="Send" class="btn btn-default">
 								</form>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
@@ -1133,7 +1219,7 @@
 			<!-- .subfooter start -->
 			<!-- ================ -->
 			<div class="subfooter">
-				<div class="container">
+				<div class="container" align = "center">
 				<div class="row">
 				
 					<div style="text-align:center; margin:0; padding:0; width:198px;"><embed src="//ra.revolvermaps.com/f/g.swf" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" wmode="window" allowScriptAccess="always" allowNetworking="all" width="160" height="160" flashvars="m=0&amp;i=06tgv6kvj2s&amp;r=false&amp;v=true&amp;b=429df2&amp;n=false&amp;s=198&amp;c=429df2"></embed><br /><img src="//ra.revolvermaps.com/js/c/06tgv6kvj2s.gif" width="1" height="1" alt="" /><a href="http://www.revolvermaps.com/?target=enlarge&amp;i=06tgv6kvj2s&amp;color=429df2&amp;m=0">Large Visitor Globe</a></div>
