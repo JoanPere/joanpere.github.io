@@ -4,5 +4,4 @@ Disallow: /plugins/
 Disallow: /bootstrap/
 Disallow: /fonts/
 Disallow: /js/
-
-
+SiteMap: http://joanperegis.es/sitemap.xml

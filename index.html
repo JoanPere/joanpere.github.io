@@ -161,7 +161,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<h1 id="about" class="title text-center">Sobre <span>Joan Pere</span></h1>
+						<h2 id="about" class="title text-center"><font size=18>Sobre <span>Joan Pere</span></font></h2>
 						<p class="lead text-center">Ingeniero Cartógrafo con un perfil bastante developer. Adaptativo y resiliente. Me gusta aportar y sumar; trabajar en grupo y también poder dirigirlo.</p>
 						<div class="space"></div>
 						<div class="row">
@@ -274,7 +274,7 @@
 		<!-- ================ -->
 		<div class="section translucent-bg bg-image-1 blue">
 			<div class="container object-non-visible" data-animation-effect="fadeIn">
-				<h1 id="services"  class="text-center title">Experiencia</h1>
+				<h2 id="services"  class="text-center title" ><font size=18>Experiencia</font></h2>
 				<div class="space"></div>
 				<div class="row">
 					<div class="col-sm-6">
@@ -368,7 +368,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
-						<h1 class="text-center">Colaboramos?</h1>
+						<h2 class="text-center"><font size=18>Colaboramos?</font></h2>
 					</div>
 				</div>
 			</div>
@@ -379,7 +379,7 @@
 		<!-- ================ -->
 		<div class="section">
 			<div class="container">
-				<h1 class="text-center title" id="portfolio">Portfolio</h1>
+				<h2 class="text-center title" id="portfolio"><font size=18>Portfolio</font></h2>
 				<div class="separator"></div>
 				<p class="lead text-center">Estos son algunos de mis trabajos o proyectos en los que he colaborado.</p>
 				<br>			
@@ -392,7 +392,7 @@
 								<li class="active"><a href="#" data-filter="*">All</a></li>
 								<li><a href="#" data-filter=".web-development">Web development</a></li>
 								<li><a href="#" data-filter=".app-development">App development</a></li>
-								<li><a href="#" data-filter=".site-building">Site building</a></li>
+								<li><a href="#" data-filter=".otros">Otros</a></li>
 							</ul>
 						</div>
 						<!-- isotope filters end -->
@@ -486,7 +486,7 @@
 
 													</div>
 													<div class="col-md-6">
-													<iframe width="550" height="310" src="https://www.youtube.com/embed/h9qZLppfQUs" frameborder="0" allowfullscreen></iframe>
+													<iframe width="550" height="400" src="https://www.youtube.com/embed/h9qZLppfQUs" frameborder="0" allowfullscreen></iframe>
 
 														<!-- <img src="images/portfolio-2.jpg" alt=""> -->
 													</div>
@@ -585,7 +585,7 @@
 													</div>
 
 													<div class="col-md-6">
-														<iframe width="420" height="315" src="https://www.youtube.com/embed/YWBzMiW3ocM" frameborder="0" allowfullscreen></iframe>
+														<iframe width="420" height="400" src="https://www.youtube.com/embed/YWBzMiW3ocM" frameborder="0" allowfullscreen></iframe>
 													</div>
 												</div>
 											</div>
@@ -630,6 +630,46 @@
 													</div>
 													<div class="col-md-6">
 														<img src="images/buscas.png" alt="Autobuses Castelló App">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+														<div class="col-sm-6 col-md-3 isotope-item otros">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/dolina.png" alt="MDT LiDAR">
+										<a class="overlay" data-toggle="modal" data-target="#project-10">
+											<i class="fa fa-search-plus"></i>
+											<span>LiDAR</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-10">Detección de dolinas con LiDAR</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-10" tabindex="-1" role="dialog" aria-labelledby="project-10-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-10-label">Detección de dolinas con LiDAR</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>El objeto de este proyecto fue la identificación de dolinas (sumideros) en la zona de Oskotz. La delimitación de estas dolinas se realizó utilizando la técnica del vuelo LiDAR. Esta tecnología permite la obtención de puntos en el suelo incluso en zonas boscosas. Se necesitaba ubicar estas dolinas, conocer el número que había y el tamaño de estas ya que para delimitar de forma precisa la cuenca hidrográfica se deben de conocer todos los cursos que sigue el agua pluvial.</p>
+														<p>Para este proyecto se realizó la planificación del vuelo para la suficiente densidad de puntos en el terreno; el cálculo de la trayectoria del avión para la georeferenciación de la nube de puntos LiDAR; el procesado y clasificación de los puntos; y por último la obtención de las dolinas mediante un análisis SIG del MDT generado a partir de la nube de puntos.</p>
+													</div>
+													<div class="col-md-6">
+														<img src="images/dolina2.png" alt="perfil dolina puntos LiDAR">
 													</div>
 												</div>
 											</div>
@@ -709,14 +749,55 @@
 												<h3>Project Description</h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>.</p>
-														<p>.</p>
+														<p>Aplicación de la Conferencia de Esri España del 2014. Esta aplicación fue desarrollada para ser una guía y una herramienta de ayuda para los asistentes a esta conferencia. En la app, se puede encontrar el programa completo de toda la conferencia.</p>
+														<p>Una de las herramientas más destacadas que tiene es un buscador dentro del programa, en el que se pueden filtrar las sesiones por palabras clave, autores,... A todo esto le acompaña una mapa interactivo en el que puedes consultar las charlas que se realizan en cada sala o la sala dónde se realiza la charla que interesa al usuario.</p>
+														<p>Esta app se ha desarrollado para Android utilizando en SDK de ArcGIS para esta plataforma.</p>
 
 														<div align=center>
 															<a href="https://play.google.com/store/apps/details?id=es.uji.smartuji.esriConference2014" target="_blank"><img src="images/gplay.png" alt="Google Play" width='120' ></a>
 														</div>
 													</div>
-													<iframe width="420" height="315" src="https://www.youtube.com/embed/f_BFiIAf-1M" frameborder="0" allowfullscreen></iframe>
+													<iframe width="420" height="400" src="https://www.youtube.com/embed/f_BFiIAf-1M" frameborder="0" allowfullscreen></iframe>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+														<div class="col-sm-6 col-md-3 isotope-item otros">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/salinas.png" alt="MDS LiDAR Cubicación Salinas">
+										<a class="overlay" data-toggle="modal" data-target="#project-11">
+											<i class="fa fa-search-plus"></i>
+											<span>LiDAR</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-11">Cubicación Salinas con LiDAR</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-11" tabindex="-1" role="dialog" aria-labelledby="project-11-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-11-label">Cubicación Salinas con LiDAR</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>El objeto de este trabajo fue el cálculo del movimiento de tierras realizado en la salina de Beriain entre los años 2008 y 2009. Para ello se generó un Modelo Digital del Terreno (MDT) del año 2009 de la zona de trabajo con tecnología LiDAR y se compararó con los modelos de fechas anteriores generados a partir de la información facilitada de años anteriores..</p>
+														<p>EL proyecto consitió en la realización del vuelo LiDAR, el procesado de los datos LiDAR para obtener el MDT, y la realización de un perfil longitudinal y los diferentes perfiles transversales.</p>
+													</div>
+													<div class="col-md-6">
+														<img src="images/salinas2.png" alt="MDS LiDAR Cubicación Salinas">
+													</div>
 												</div>
 											</div>
 											<div class="modal-footer">
@@ -728,16 +809,16 @@
 								<!-- Modal end -->
 							</div>
 							
-							<div class="col-sm-6 col-md-3 isotope-item web-development">
+							<div class="col-sm-6 col-md-3 isotope-item app-development">
 								<div class="image-box">
 									<div class="overlay-container">
-										<img src="images/portfolio-8.jpg" alt="">
+										<img src="images/mobility.png" alt="UJI Mobility App">
 										<a class="overlay" data-toggle="modal" data-target="#project-8">
 											<i class="fa fa-search-plus"></i>
-											<span>Web development</span>
+											<span>App development</span>
 										</a>
 									</div>
-									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-8">Project Title</a>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-8">UJI Mobility</a>
 								</div>
 								<!-- Modal -->
 								<div class="modal fade" id="project-8" tabindex="-1" role="dialog" aria-labelledby="project-8-label" aria-hidden="true">
@@ -745,137 +826,24 @@
 										<div class="modal-content">
 											<div class="modal-header">
 												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-8-label">Project Title</h4>
+												<h4 class="modal-title" id="project-8-label">UJI Mobility</h4>
 											</div>
 											<div class="modal-body">
 												<h3>Project Description</h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+														<p>Esta app está desarrollada con Andorid sobre la plataforma de UJI Smart Campus y se centra en la mobilidad dentro del campus de la Universitat Jaume I. Esta herramienta permite:</p>
+														<ul>
+															<li>Cáclular rutas entre dos puntos (en el interior o exterior de los edificios).</li>
+															<li>Cálcular la ruta al restaurante o lugar para comer más cercano.</li>
+															<li>Cálcular la ruta hasta el wc más cercano</li>
+															<li>Cálcular las rutas de emergencia desde cualquier edificio hasta su punto de encuentro.</li>
+															<li>Las rutas se pueden realizar desde la posición del usuario o indicando el punto en el mapa.</li>
+															<li>En los settings se puede indicar que las rutas sean para personas con mobilidad reducida</li>
+														</ul>
 													</div>
 													<div class="col-md-6">
-														<img src="images/portfolio-8.jpg" alt="">
-													</div>
-												</div>
-											</div>
-											<div class="modal-footer">
-												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Modal end -->
-							</div>
-
-							<div class="col-sm-6 col-md-3 isotope-item web-development">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="images/portfolio-9.jpg" alt="">
-										<a class="overlay" data-toggle="modal" data-target="#project-9">
-											<i class="fa fa-search-plus"></i>
-											<span>Web development</span>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-9">Project Title</a>
-								</div>
-								<!-- Modal -->
-								<div class="modal fade" id="project-9" tabindex="-1" role="dialog" aria-labelledby="project-9-label" aria-hidden="true">
-									<div class="modal-dialog modal-lg">
-										<div class="modal-content">
-											<div class="modal-header">
-												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-9-label">Project Title</h4>
-											</div>
-											<div class="modal-body">
-												<h3>Project Description</h3>
-												<div class="row">
-													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
-													</div>
-													<div class="col-md-6">
-														<img src="images/portfolio-9.jpg" alt="">
-													</div>
-												</div>
-											</div>
-											<div class="modal-footer">
-												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Modal end -->
-							</div>
-
-							<div class="col-sm-6 col-md-3 isotope-item site-building">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="images/portfolio-10.jpg" alt="">
-										<a class="overlay" data-toggle="modal" data-target="#project-10">
-											<i class="fa fa-search-plus"></i>
-											<span>Site Building</span>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-10">Project Title</a>
-								</div>
-								<!-- Modal -->
-								<div class="modal fade" id="project-10" tabindex="-1" role="dialog" aria-labelledby="project-10-label" aria-hidden="true">
-									<div class="modal-dialog modal-lg">
-										<div class="modal-content">
-											<div class="modal-header">
-												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-10-label">Project Title</h4>
-											</div>
-											<div class="modal-body">
-												<h3>Project Description</h3>
-												<div class="row">
-													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
-													</div>
-													<div class="col-md-6">
-														<img src="images/portfolio-10.jpg" alt="">
-													</div>
-												</div>
-											</div>
-											<div class="modal-footer">
-												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Modal end -->
-							</div>
-
-							<div class="col-sm-6 col-md-3 isotope-item web-development">
-								<div class="image-box">
-									<div class="overlay-container">
-										<img src="images/portfolio-11.jpg" alt="">
-										<a class="overlay" data-toggle="modal" data-target="#project-11">
-											<i class="fa fa-search-plus"></i>
-											<span>Web development</span>
-										</a>
-									</div>
-									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-11">Project Title</a>
-								</div>
-								<!-- Modal -->
-								<div class="modal fade" id="project-11" tabindex="-1" role="dialog" aria-labelledby="project-11-label" aria-hidden="true">
-									<div class="modal-dialog modal-lg">
-										<div class="modal-content">
-											<div class="modal-header">
-												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-11-label">Project Title</h4>
-											</div>
-											<div class="modal-body">
-												<h3>Project Description</h3>
-												<div class="row">
-													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
-													</div>
-													<div class="col-md-6">
-														<img src="images/portfolio-11.jpg" alt="">
+														<img src="images/mobility.png" alt="UJI Mobility App">
 													</div>
 												</div>
 											</div>
@@ -891,13 +859,57 @@
 							<div class="col-sm-6 col-md-3 isotope-item app-development">
 								<div class="image-box">
 									<div class="overlay-container">
-										<img src="images/portfolio-12.jpg" alt="">
-										<a class="overlay" data-toggle="modal" data-target="#project-12">
+										<img src="images/parkingrealtime.png" alt="UJI Parking Real Time App">
+										<a class="overlay" data-toggle="modal" data-target="#project-9">
 											<i class="fa fa-search-plus"></i>
-											<span>App Development</span>
+											<span>App development</span>
 										</a>
 									</div>
-									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-12">Project Title</a>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-9">UJI Parking Real Time App</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-9" tabindex="-1" role="dialog" aria-labelledby="project-9-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-9-label">UJI Parking Real Time App</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Esta App permite ver el estado actual (libre, ocupada, solicitada,...) de las plazas de parking de la Universitat Jaume I.</p>
+														<p>Es una app nativa de Android y usa el SDK de ArcGIS para Android. Es una app de GIS a tiempo real. Actualmente los datos de ocupación son simulados por un servicio web. Los datos del simulador emulan la realidad lo más fiel posible a la espera de la sensorización de las plazas de parking de la UJI. Una vez sensorizados el servicio que ofrece la ocupación de las plazas se conectará directamente a los sensores.</p>
+													</div>
+													<div class="col-md-6">
+														<iframe width="540" height="400" src="https://www.youtube.com/embed/f_mypOvUm4U" frameborder="0" allowfullscreen></iframe>
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+
+
+
+
+							<div class="col-sm-6 col-md-3 isotope-item otros">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/fundacion.jpg" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-12">
+											<i class="fa fa-search-plus"></i>
+											<span>Cartografía Histórica</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-12">Reprodicción Facsimilar</a>
 								</div>
 								<!-- Modal -->
 								<div class="modal fade" id="project-12" tabindex="-1" role="dialog" aria-labelledby="project-12-label" aria-hidden="true">
@@ -905,17 +917,18 @@
 										<div class="modal-content">
 											<div class="modal-header">
 												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-12-label">Project Title</h4>
+												<h4 class="modal-title" id="project-12-label">Reprodicción Facsimilar Cartografía Histórica</h4>
 											</div>
 											<div class="modal-body">
 												<h3>Project Description</h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+														<p>La <a href="http://www.fglorente.org/memoria.html" target = "_blank">Fundación Fundación Luis Giménez Lorente</a> de cartografía histórica de la Universidad Politécnica de Valencia, cuenta unos fondos cartográficos de capital importancia para la comunidad Universitaria y el público en general del siglo XVI-XVIII.</p>
+														<p>Una de sus actividades fue por una parte la conservación y adecuación. Por otra parte querían realizar una exposición con facsímiles de los originales.</p>
+														<p>Mi tarea fue la de controlar el color mediante la realización de perfiles de los dispositivos de entrada y de salida, de manera que el color se conservara entre los originales y los facsímiles.</p>
 													</div>
 													<div class="col-md-6">
-														<img src="images/portfolio-12.jpg" alt="">
+														<a href="http://www.fglorente.org/memoria.html" target = "_blank"><img src="images/fundacion2.jpg" alt="Facsimil Fundación Giménez Lorente Cartografía Histórica"></a>
 													</div>
 												</div>
 											</div>
@@ -941,7 +954,7 @@
 		<!-- ================ -->
 		<div class="section translucent-bg bg-image-2 pb-clear">
 			<div class="container object-non-visible" data-animation-effect="fadeIn">
-				<h1 id="clients" class="title text-center">Tecnologías</h1>
+				<h2 id="clients" class="title text-center"><font size=18>Tecnologías</font></h2>
 				<div class="space"></div>
 				<div class="row">
 					<div class="col-md-4">
@@ -950,11 +963,16 @@
 								<img src="images/testimonial-1.png" alt="">
 							</div>
 							<div class="media-body">
-								<h3 class="media-heading">You are Amazing!</h3>
-								<blockquote>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur quo.</p>
-									<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-								</blockquote>
+								<h3 class="media-heading">GIS</h3>
+									<ul class="list-unstyled">
+										<li><i class="fa fa-caret-right pr-10 text-colored"></i>ArcGIS for Desktop</li>
+										<li><i class="fa fa-caret-right pr-10 text-colored"></i>ArcGIS for Server</li>
+										<li><i class="fa fa-caret-right pr-10 text-colored"></i>ArcGIS Online</li>
+										<li><i class="fa fa-caret-right pr-10 text-colored"></i>GvSIG</li>
+										<li><i class="fa fa-caret-right pr-10 text-colored"></i>QGIS</li>
+										<li><i class="fa fa-caret-right pr-10 text-colored"></i>Global Mapper</li>
+										<li><i class="fa fa-caret-right pr-10 text-colored"></i>PostgreSQL</li>
+									</ul>
 							</div>
 						</div>
 					</div>
@@ -964,11 +982,18 @@
 								<img src="images/testimonial-2.png" alt="">
 							</div>
 							<div class="media-body">
-								<h3 class="media-heading">Yeah!</h3>
-								<blockquote>
-									<p>Iure aperiam consequatur quo quis exercitationem reprehenderit dolor vel ducimus.</p>
-									<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-								</blockquote>
+								<h3 class="media-heading">Developer</h3>
+								<ul class="list-unstyled">
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>Android</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>Java</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>JavaScript</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>Php</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>html,css,..</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>Visual Basic</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>C++</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>C#</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>SQL</li>
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -978,11 +1003,20 @@
 								<img src="images/testimonial-3.png" alt="">
 							</div>
 							<div class="media-body">
-								<h3 class="media-heading">Thank You!</h3>
-								<blockquote>
-									<p>Aperiam consequatur quo quis exercitationem reprehenderit suscipit iste placeat.</p>
-									<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-								</blockquote>
+								<h3 class="media-heading">Geomática</h3>
+								<ul class="list-unstyled">
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>MicroStation</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>Autocad</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>TerraSolid</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>ENVI</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>ERDAS</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>Visual Basic</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>Matlab</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>Eclipse</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>Android Studio</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>GIT</li>
+
+									</ul>
 							</div>
 						</div>
 					</div>
@@ -994,11 +1028,15 @@
 								<img src="images/testimonial-2.png" alt="">
 							</div>
 							<div class="media-body">
-								<h3 class="media-heading">Thank You!</h3>
-								<blockquote>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur quo.</p>
-									<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-								</blockquote>
+								<h3 class="media-heading">Cursos ESRI</h3>
+								<ul >
+									<li>ArcGIS Server. Compartir contenido GIS en la web</li>
+									<li>Configuración y Administración de ArGIS Server</li>
+									<li>Implementar flujos de trabajo de versionado en una geodatabase multiusuario</li>
+									<li></i>Distribución de datos usando la replicación de la geodatabase</li>
+								</ul>
+
+								
 							</div>
 						</div>
 					</div>
@@ -1008,11 +1046,10 @@
 								<img src="images/testimonial-3.png" alt="">
 							</div>
 							<div class="media-body">
-								<h3 class="media-heading">Amazing!</h3>
-								<blockquote>
-									<p>Iure aperiam consequatur quo quis exercitationem reprehenderit dolor vel ducimus.</p>
-									<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-								</blockquote>
+								<h3 class="media-heading">ESRI Formación</h3>
+								<ul>
+									<li>Aprende a realizar análisis de red con ArcGIS</li>
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -1022,11 +1059,20 @@
 								<img src="images/testimonial-1.png" alt="">
 							</div>
 							<div class="media-body">
-								<h3 class="media-heading">Best!</h3>
-								<blockquote>
-									<p>Aperiam consequatur quo quis exercitationem reprehenderit suscipit iste placeat.</p>
-									<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-								</blockquote>
+								<h3 class="media-heading">ESRI web course</h3>
+								<ul>
+									<li>Getting Started with Geodatabase Topology</li>
+									<li>Authoring Web Maps Using ArcGIS Online</li>
+									<li>Using Lidar Data in ArcGIS 10</li>
+									<li>Managing Lidar Data Using LAS Datasets</li>
+									<li>Creating and Sharing Locator Packages for ArcGIS 10.1</li>
+									<li>Managing Lidar Data in ArcGIS 10</li>
+									<li>Creating and Editing Labels and Annotation</li>
+									<li>Creating 3D Data Using ArcGIS 10</li>
+									<li>Advanced Techniques for Cartographic Representations</li>
+									<li>3D Visualization Techniques Using ArcGIS 10</li>
+									<li>Introduction to the ArcGIS for Server REST API</li>
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -1040,12 +1086,12 @@
 						<div class="row">
 							<div class="col-xs-2">
 								<div class="list-horizontal-item">
-									<img src="images/client-1.png" alt="client">
+									<img src="images/esri.png" alt="esri">
 								</div>
 							</div>
 							<div class="col-xs-2">
 								<div class="list-horizontal-item">
-									<img src="images/client-2.png" alt="client">
+									<img src="images/js.png" alt="JavaScript">
 								</div>
 							</div>
 							<div class="col-xs-2">
@@ -1060,12 +1106,12 @@
 							</div>
 							<div class="col-xs-2">
 								<div class="list-horizontal-item">
-									<img src="images/client-5.png" alt="client">
+									<img src="images/java.png" alt="Java">
 								</div>
 							</div>
 							<div class="col-xs-2">
 								<div class="list-horizontal-item">
-									<img src="images/client-6.png" alt="client">
+									<img src="images/client-6.png" alt="Android">
 								</div>
 							</div>
 						</div>
@@ -1078,15 +1124,7 @@
 
 		<!-- section start -->
 		<!-- ================ -->
-		<div class="default-bg space">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<h1 class="text-center"></h1>
-					</div>
-				</div>
-			</div>
-		</div>
+
 		<!-- section end -->
 
 		<!-- footer start -->
@@ -1097,7 +1135,7 @@
 			<!-- ================ -->
 			<div class="footer section">
 				<div class="container">
-					<h1 class="title text-center" id="contact">¿En que te puedo ayudar?</h1>
+					<h2 class="title text-center" id="contact"><font size=18>¿En que te puedo ayudar?</font></h2>
 					<div class="space"></div>
 					<div class="row">
 						<div class="col-sm-6">
@@ -1129,7 +1167,7 @@
 
 						<div class="col-sm-6">
 							<div class="footer-content">
-								<form role="form" id="footer-form" name="contacto" action="" method="POST">
+								<form role="form" id="footer-form" name="contacto" action="enviado.php" method="POST">
 								
 									<div class="form-group has-feedback">
 										<label class="sr-only" for="name">Name</label>
@@ -1187,10 +1225,10 @@
 				<div class="container" align = "center">
 				<div class="row">
 				
-					<div style="text-align:center; margin:0; padding:0; width:198px;"><embed src="//ra.revolvermaps.com/f/g.swf" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" wmode="window" allowScriptAccess="always" allowNetworking="all" width="160" height="160" flashvars="m=0&amp;i=06tgv6kvj2s&amp;r=false&amp;v=true&amp;b=429df2&amp;n=false&amp;s=198&amp;c=429df2"></embed><br /><img src="//ra.revolvermaps.com/js/c/06tgv6kvj2s.gif" width="1" height="1" alt="" /><a href="http://www.revolvermaps.com/?target=enlarge&amp;i=06tgv6kvj2s&amp;color=429df2&amp;m=0">Large Visitor Globe</a></div>
-						<div class="col-md-12">
+					<div style="text-align:center; margin:0; padding:0; width:198px;"><embed src="//ra.revolvermaps.com/f/g.swf" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" wmode="window" allowScriptAccess="always" allowNetworking="all" width="200" height="200" flashvars="m=0&amp;i=06tgv6kvj2s&amp;r=false&amp;v=true&amp;b=429df2&amp;n=false&amp;s=198&amp;c=429df2"></embed><br /><img src="//ra.revolvermaps.com/js/c/06tgv6kvj2s.gif" width="1" height="1" alt="" /><a href="http://www.revolvermaps.com/?target=enlarge&amp;i=06tgv6kvj2s&amp;color=429df2&amp;m=0">Large Visitor Globe</a></div>
+						<!-- <div class="col-md-12">
 							<p class="text-center">Copyright © 2014 Worthy by <a target="_blank" href="http://htmlcoder.me">HtmlCoder</a>.</p>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
