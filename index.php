@@ -1,16 +1,15 @@
-
-
+<?php include('lang/sesion.php'); ?>
 <!DOCTYPE html>
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!-->
-<html lang="es">
+<html>
 <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
 
-		<meta name="description" content="Joan Pere Avariento - Profesional relacionado con el mundo de la geomática, cartografía, SIG, GIS, desarrollo de aplicaciones, Android, ArcGIS, en Nules, Castellón" />
-		<meta name="keywords" content="GIS, Joan Pere Avariento, SIG, geodesia, cartografía, ArcGIS, Android, Desarrollo" />
-		<title>Joan Pere Avariento | Contacto - Especializsta en tecnología GIS SIG cartografía android Esri ArcGIS LiDAR desarrollo aplicaciones 3D teledeteccion desarrollo en Nules Castellón</title>	
+		<meta name="description" content="Joan Pere Avariento - Profesional relacionado con el mundo de la geomática, cartografía, SIG, GIS, despliegue de paltaforma, plataforma ESRI, ArcGIS, desarrollo de aplicaciones, Web, Android, Python, ArcGIS, en Nules, Castellón" />
+		<meta name="keywords" content="GIS, Joan Pere, Joan Pere Avariento, SIG, Sistemas de Información Geográfica, ArcGIS, ESRI, cartografía, Android, Desarrollo, Python, Scripts, Geoprocesamineto, Automatización, Desarrollo Web, Desarrollador GIS, Arquitecto GIS, geomática" />
+		<title><?php echo TITLE;?></title>
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<meta name="author" content="Joan Pere Avariento">
 
@@ -36,7 +35,7 @@
 		<!-- Worthy core CSS file -->
 		<link href="css/style.css" rel="stylesheet">
 
-		<!-- Custom css --> 
+		<!-- Custom css -->
 		<link href="css/custom.css" rel="stylesheet">
 
 		<!-- Google Analytics -->
@@ -60,32 +59,46 @@
 		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
 
 		<!-- header start -->
-		<!-- ================ --> 
+		<!-- ================ -->
 		<header class="header fixed clearfix navbar navbar-fixed-top">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4">
+					<div class="col-xs-4">
 
 						<!-- header-left start -->
 						<!-- ================ -->
 						<div class="header-left clearfix">
 
+
+
+
 							<!-- logo -->
 							<div class="logo smooth-scroll">
 								<a href="#banner"><img id="logo" src="images/logo2.png" alt="Joan Pere GIS"></a>
 							</div>
-
+						 	<div id="languajeMenu">
+							      <ul class="nav navbar-nav navbar-right affix-top">
+							        <li class="dropdown">
+							          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" ><img id="img_lang" src="<?php echo $lang_icon;?>"><span class="caret"></span></a>
+							          <ul class="dropdown-menu">
+							            <li><a onclick="document.getElementById('img_lang').src ='lang/es.png'" href='?lang=es'><img src="lang/es.png" > <?php echo ESPAÑOL?></a></li>
+							            <li><a onclick="document.getElementById('img_lang').src ='lang/en.png'" href='?lang=en'><img src="lang/en.png" > <?php echo INGLES?></a></li>
+							            <li><a onclick="document.getElementById('img_lang').src ='lang/cat.png'" href='?lang=cat'><img src="lang/cat.png" > <?php echo CATALA?></a></li>
+							          </ul>
+							        </li>
+							      </ul>
+						    </div>
 							<!-- name-and-slogan -->
-							<div class="site-name-and-slogan smooth-scroll">
+							<div class="site-name-and-slogan smooth-scroll visible-lg-inline">
 								<div class="site-name"><a href="#banner">Joan Pere Avariento</a></div>
-								<div class="site-slogan">Experto en GIS de <a target="_blank" href="http://www.geotec.uji.es/">GEOTEC</a></div>
+								<div class="site-slogan"><?php echo EXPERT;?><a target="_blank" href="http://www.gesvatec.com/">Gesvatec</a></div>
 							</div>
 
 						</div>
 						<!-- header-left end -->
 
 					</div>
-					<div class="col-md-8">
+					<div class="col-xs-8">
 
 						<!-- header-right start -->
 						<!-- ================ -->
@@ -114,11 +127,12 @@
 										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 											<ul class="nav navbar-nav navbar-right">
 												<li class="active"><a href="#banner">Home</a></li>
-												<li><a href="#about">Presentación</a></li>
-												<li><a href="#services">Experiencia</a></li>
+												<li><a href="#about"><?php echo PRESENTACION;?></a></li>
+												<li><a href="#services"><?php echo EXPERIENCIA;?></a></li>
 												<li><a href="#portfolio">Portfolio</a></li>
-												<li><a href="#clients">Tecnologías</a></li>
-												<li><a href="#contact">Contacto</a></li>
+												<li><a href="#clients"><?php echo TECNOLOGIAS;?></a></li>
+												<li><a href="#contact"><?php echo CONTACTO;?></a></li>
+												<!--<li><a href="https://joanperenules.wixsite.com/joanperegis/blog" target="_blank">Blog</a></li>-->
 											</ul>
 										</div>
 
@@ -131,6 +145,19 @@
 
 						</div>
 						<!-- header-right end -->
+<!-- <div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+    <img src="lang/es.png">
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+    Option two can be something else and selecting it will deselect option one
+  </label>
+</div> -->
+
 
 					</div>
 				</div>
@@ -147,7 +174,11 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
 							<h1 class="text-center">Joan Pere 	<span>Avariento</span></h1>
-							<p class="lead text-center">Apasionado de los <b><font color="#429DF2">GIS</font></b>, de las <b><font color="#429DF2">NUEVAS TECNOLOGÍAS</font></b> y de la <b><font color="#429DF2">CARTOGRAFÍA</font></b>.<br>Uniendo el mundo del GIS y las Nuevas Tecnologías, </b><br><b><font color="#429DF2">el límite es la creatividad</font></b>. </p>
+							<p class="lead text-center"><?php echo PRES1?><b><font color="#429DF2">GIS</font></b><?php echo PRES2?><b><font color="#429DF2"><?php echo PRES3?></font></b><?php echo PRES4?><b><font color="#429DF2"><?php echo PRES5?></font></b>.<br><?php echo PRES6?></b><br><b><font color="#429DF2"><?php echo PRES7?></font></b>. </p>
+
+							<div class="img-cont-joan">
+								<img class="img-joan  visible-lg-inline" src="images/jp/jp4.jpg" alt="Joan Pere Avariento Vicent">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -161,22 +192,23 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<h2 id="about" class="title text-center"><font size=18>Sobre <span>Joan Pere</span></font></h2>
-						<p class="lead text-center">Ingeniero Cartógrafo con un perfil bastante developer. Adaptativo y resiliente. Me gusta aportar y sumar; trabajar en grupo y también poder dirigirlo.</p>
+						<h2 id="about" class="title text-center"><font size=18><?php echo ABOUT?><span>Joan Pere</span></font></h2>
+						<p class="lead text-center"><span><b><font color="#429DF2"><?php echo RESUMEN1?><br></font></b></span><?php echo RESUMEN2?><br><?php echo RESUMEN2b?><span><b><font color="#429DF2"><?php echo RESUMEN3?></font></b></span><?php echo RESUMEN4?></p>
 						<div class="space"></div>
 						<div class="row">
 							<div class="col-md-6">
-								<img src="images/section-image-1.jpg" alt="Joan Pere Avariento">
+
+								<img src="images/jp/jp1.jpg" alt="Joan Pere Avariento">
 								<div class="space"></div>
 							</div>
 							<div class="col-md-6">
-								<p>Me gustan los <b><font color="#429DF2">retos</font></b> y no me importa <b><font color="#429DF2">salir de mi zona de confort</font></b>. Creo en el <b><font color="#429DF2">constante aprendizaje, reciclaje y crecimiento personal y profesional</font></b>. Se puede <b><font color="#429DF2">aprender de todo el mundo</font></b> ya que siempre habrá alguien que haga alguna cosa mejor que tu.</p>
-								<p>Algunas de las citas que más me gustan son:</p>
+								<p><?php echo SOBRE1?><b><font color="#429DF2"><?php echo SOBRE2?></font></b><?php echo SOBRE3?><b><font color="#429DF2"><?php echo SOBRE4?></font></b><?php echo SOBRE5?><b><font color="#429DF2"><?php echo SOBRE6?></font></b><?php echo SOBRE7?><b><font color="#429DF2"><?php echo SOBRE8?></font></b><?php echo SOBRE9?></p>
+								<p><?php echo SOBRE10?></p>
 								<ul class="list-unstyled">
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i><i>"Las oportunidades no son producto de la casualidad, más bien son el resultado del trabajo" </i>(Tonatihu)</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i><i>"Si pudieramos saber primero en donde estamos y a donde nos dirigimos, podríamos juzgar mejor que hacer y como hacerlo"</i> (Abraham Lincoln)</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i><i>"Siempre que te pregunten si puedes hacer un trabajo, contesta que sí y ponte enseguida a aprender como se hace"</i>(Franklin D. Roosevelt)</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i><i>"El tiempo tiene muchos nombres. Para los débiles es lo inalcanzable. Para los temerosos, lo desconocido. para los valientes es la oportunidad."</i>(Víctor Hugo)</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i><i><?php echo SOBRE11?></i>(Tonatihu)</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i><i><?php echo SOBRE12?></i> (Abraham Lincoln)</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i><i><?php echo SOBRE13?></i> (Franklin D. Roosevelt)</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i><i><?php echo SOBRE14?></i> (Víctor Hugo)</li>
 									<!--<li><i class="fa fa-caret-right pr-10 text-colored"></i><i></i></li>-->
 								</ul>
 							</div>
@@ -185,28 +217,55 @@
 						<h2>Skills</h2>
 						<div class="row">
 							<div class="col-md-6">
-								<p>Cuento con más de tres años de experiencia en el mundo de los GIS, sobretodo con <b><font color="#429DF2">software ESRI</font></b>.</p>
-								<p>En los proyectos en los que he estado colaborado, he estado trabajando en todos los niveles: datos, servicios y cliente. Las tareas que he estado realizando son:</p>
-								<p>Creación de servicios y mantenimiento de <b><font color="#429DF2">ArcGIS Server</font></b>. Diseño de bases de datos corporativas ArcSDE. Mantenimiento de <b><font color="#429DF2">bases de datos corporativas ArcSDE</font></b>. Aplicaciones Web con <b><font color="#429DF2">API de Javascript de ARCGIS</font></b>. Aplicaciones móviles con el <b><font color="#429DF2">SDK de Android de ArcGIS</font></b></p>
+								<p><?php echo SKILLS10?><br></p>
+
+								<p><?php echo SKILLS11?></p>
+								<ul class="list-unstyled">
+									<li class="lista-skills"><i class="fa fa-caret-right pr-10 text-colored"></i><?php echo SKILLS12?></li>
+									<li class="lista-skills"><i class="fa fa-caret-right pr-10 text-colored"></i><?php echo SKILLS13?></li>
+									<li class="lista-skills"><i class="fa fa-caret-right pr-10 text-colored"></i><?php echo SKILLS14?></li>
+									<li class="lista-skills"><i class="fa fa-caret-right pr-10 text-colored"></i><?php echo SKILLS15?></li>
+									<li class="lista-skills"><i class="fa fa-caret-right pr-10 text-colored"></i><?php echo SKILLS16?></li>
+									<li class="lista-skills"><i class="fa fa-caret-right pr-10 text-colored"></i><?php echo SKILLS17?></li>
+								</ul>
+
 							</div>
 							<div class="col-md-6">
 								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingPreOne">
+											<h4 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordion" href="#collapsePreOne" aria-expanded="true" aria-controls="collapsePreOne">
+													Solutions
+												</a>
+											</h4>
+										</div>
+										<div id="collapsePreOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingPreOne">
+											<div class="panel-body">
+												<?php echo SOLUTIONS1?><b><font color="#429DF2"><?php echo SOLUTIONS2?></font></b><?php echo SOLUTIONS3?><p><br>
+												<?php echo SOLUTIONS4?><b><font color="#429DF2"><?php echo SOLUTIONS5?></font></b><?php echo SOLUTIONS6?><i><?php echo SOLUTIONS7?></i>,
+												<?php echo SOLUTIONS8?><b><font color="#429DF2"><?php echo SOLUTIONS9?></font></b> <i><?php echo SOLUTIONS10?></i><?php echo SOLUTIONS11?><b><font color="#429DF2"><?php echo SOLUTIONS12?></font></b><?php echo SOLUTIONS13?>
+												<b><font color="#429DF2"><?php echo SOLUTIONS14?></font></b><?php echo SOLUTIONS15?><p><br>
+												<?php echo SOLUTIONS16?>
+												<p><?php echo SOLUTIONS17?><b><font color="#429DF2"><?php echo SOLUTIONS18?></font></b><?php echo SOLUTIONS19?></p>
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
 										<div class="panel-heading" role="tab" id="headingOne">
 											<h4 class="panel-title">
-												<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
 													GIS
 												</a>
 											</h4>
 										</div>
-										<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+										<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
 											<div class="panel-body">
-												Me apasiona cualquier cosa relacionada con el GIS y por mi perfil Cartográfico e Informático, tengo experiencia en todas las facetas del GIS:<p>
+												<?php echo GIS1?><p>
 												<ul class="list-unstyled">
-														<li><i class="fa fa-caret-right pr-10 text-colored"></i>Producción cartográfica</li>
-														<li><i class="fa fa-caret-right pr-10 text-colored"></i>Diseño, implementación y mantenimiento de bases de datos (también corporativas)</li>
-														<li><i class="fa fa-caret-right pr-10 text-colored"></i>Desarrollo de servicios de mapa, features, geoprocesamientos,...</li>
-														<li><i class="fa fa-caret-right pr-10 text-colored"></i>Diseño y desarrollo de clientes web y Android con componente GIS</li>
+														<li><i class="fa fa-caret-right pr-10 text-colored"></i><?php echo GIS2?></li>
+														<li><i class="fa fa-caret-right pr-10 text-colored"></i><?php echo GIS3?></li>
+														<li><i class="fa fa-caret-right pr-10 text-colored"></i><?php echo GIS4?></li>
 											</div>
 										</div>
 									</div>
@@ -220,7 +279,7 @@
 										</div>
 										<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 											<div class="panel-body">
-												En mis prácticas de empresa trabajé y me formé en la tecnología LiDAR. Fue una gran oportunidad ya que la empresa en la que trabajé, recién llegado yo, adquirió un sensor LiDAR y también un avión para hacer los vuelos. Por lo que tuve la gran suerte de aprender al mismo tiempo que aprendía la empresa, desde la planificación de vuelos, adquisición de los datos, pre-procesado de los datos y post-procesado.
+												<?php echo LIDAR?>
 											</div>
 										</div>
 									</div>
@@ -234,15 +293,15 @@
 										</div>
 										<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 											<div class="panel-body">
-												Me encanta programar, es una pasión. Traducir proyectos o ideas a un idioma lógico para que lo pueda entender una máquina, podría pasarme horas... Entre los lenguajes con los que he trabajado, destacar algunos:<p>
+												<?php echo DEVELOPER1?><p>
 												<ul class="list-unstyled">
-													<li><i class="fa fa-caret-right pr-10 text-colored"></i>Java</li>
-													<li><i class="fa fa-caret-right pr-10 text-colored"></i>Android</li>
 													<li><i class="fa fa-caret-right pr-10 text-colored"></i>JavaScript</li>
+													<li><i class="fa fa-caret-right pr-10 text-colored"></i>Java (Android)</li>
+													<li><i class="fa fa-caret-right pr-10 text-colored"></i>Python</li>
+													<li><i class="fa fa-caret-right pr-10 text-colored"></i>Android</li>
 													<li><i class="fa fa-caret-right pr-10 text-colored"></i>C++</li>
 													<li><i class="fa fa-caret-right pr-10 text-colored"></i>C#</li>
-													<li><i class="fa fa-caret-right pr-10 text-colored"></i>VisualBasic</li><p>
-												Integrar la programación con herramientas geoespaciales, creo que es muy potente, ya que son los dos de los campos aplicados más amplios que conozco (con todo el respeto a las matemáticas y la física).
+												<?php echo DEVELOPER2?><p>
 											</div>
 										</div>
 									</div>
@@ -250,14 +309,17 @@
 										<div class="panel-heading" role="tab" id="headingFour">
 											<h4 class="panel-title">
 												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-													Liderar y trabajar en equipo
+												<?php echo LEAD1?>
 												</a>
 											</h4>
 										</div>
 										<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
 											<div class="panel-body">
-												Durante tres años tuve la oportunidad de dirigir la Escuela de Música de Nules. Esta experiencia me enriqueció mucho, ya que me dió la oportunidad de liderar un equipo de 17 personas y a la vez tener gente por arriba que te manda.<p>
-												Entre las cosas importantes que se hicieron durante mi periodo como director destacar: pasar a ser una escuela oficial, es decir, tener a todo el personal con contrato; aumentar un 300% la matrícula de nuevos alumnos; cambiar la imagen que se tenía de la escuela de música, tanto desde instituciones locales como desde los propios ciudadanos y padres del alumnado.
+												<p><?php echo LEAD2?></p>
+												<p><?php echo LEAD3?></p>
+												<p><?php echo LEAD4?></p>
+												<p><?php echo LEAD5?></p>
+												<p><?php echo LEAD6?></p>
 											</div>
 										</div>
 									</div>
@@ -274,92 +336,62 @@
 		<!-- ================ -->
 		<div class="section translucent-bg bg-image-1 blue">
 			<div class="container object-non-visible" data-animation-effect="fadeIn">
-				<h2 id="services"  class="text-center title" ><font size=18>Experiencia</font></h2>
+				<h2 id="services"  class="text-center title" ><font size=18><?php echo EXP1?></font></h2>
+				<div class="space"></div>
+				<style>.embed-container {position: relative; padding-bottom: 80%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+				small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}
+			  </style>
+				<div class="embed-container">
+					<iframe width="300" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+
+					title="CV Joan Pere" src="https://joanpere-gis.maps.arcgis.com/apps/MapTour/index.html?appid=362f462be3cc4d57b835b0f38a707f11"></iframe>
+				</div>
+				<div class="space"></div>
+				<div class="space"></div>
 				<div class="space"></div>
 				<div class="row">
-					<div class="col-sm-6">
-						<div class="media">
-							<div class="media-body text-right">
-								<h4 class="media-heading"><font color="#000000">Desarrollo de aplicaciones</font></i></h4>
-								<p><i><font color="#000000">Desarrollo de clientes web y móvil</font></i>. Sobretodo servicios o clientes dónde la localización juega un papel importante. También con un fuerte componente GIS.</p>
-							</div>
-							<div class="media-right">
-								<i class="fa fa-cog"></i>
-							</div>
-						</div>
-						<div class="media">
-							<div class="media-body text-right">
-								<h4 class="media-heading"><font color="#000000">Generación de Datos geográficos</font></i></h4>
-								<p><i><font color="#000000">Creación de datos</font></i>; creación de bases de datos geográficas; obtención de datos a partir de distintas fuentes de datos de internet; tratamiento de los datos, homogeneización, etc.</p>
-							</div>
-							<div class="media-right">
-								<i class="fa fa-check"></i>
-							</div>
-						</div>
-						<div class="media">
-							<div class="media-body text-right">
-								<h4 class="media-heading"><font color="#000000">Análisis GIS</font></i></h4>
-								<p><i><font color="#000000">Análisis GIS de los datos</font></i>. Gran experiencia en la generación de análisis GIS con todo tipo de operaciones espaciales, aplicables a cualquier disciplina en la que sus datos tengan o puedan tener un componente espacial.</p>
-							</div>
-							<div class="media-right">
-								<i class="fa fa-desktop"></i>
-							</div>
-						</div>
-						<div class="media">
-							<div class="media-body text-right">
-								<h4 class="media-heading"><font color="#000000">Trabajo en equipo</font></i></h4>
-								<p><i><font color="#000000">Trabajos en grupo y multidisciplinares</font></i>. Usando metodologías de trabajo ágiles como scrum.</p>
-							</div>
-							<div class="media-right">
-								<i class="fa fa-users"></i>
+					<div class="col-md-6">
+						<div class="media testimonial">
+							<div class="media-body">
+								<h3  style="margin-left: 2rem;" class="media-heading"><?php echo EXP14?></h3>
+								<div class="space"></div>
+								<p style="margin-left: 5rem;"><?php echo EXP26?></p>
+								<ul class="list-unstyled">
+									<li class="list-exp"><i class="fa fa-caret-right pr-10 text-colored-white"></i><?php echo EXP27?></li>
+									<li class="list-exp"><i class="fa fa-caret-right pr-10 text-colored-white"></i><?php echo EXP28?></li>
+									<li class="list-exp"><i class="fa fa-caret-right pr-10 text-colored-white"></i><?php echo EXP29?></li>
+									<li class="list-exp"><i class="fa fa-caret-right pr-10 text-colored-white"></i><?php echo EXP30?></li>
+									<li class="list-exp"><i class="fa fa-caret-right pr-10 text-colored-white"></i><?php echo EXP31?></li>
+									<li class="list-exp"><i class="fa fa-caret-right pr-10 text-colored-white"></i><?php echo EXP32?></li>
+									<li class="list-exp"><i class="fa fa-caret-right pr-10 text-colored-white"></i><?php echo EXP33?></li>
+									<li class="list-exp"><i class="fa fa-caret-right pr-10 text-colored-white"></i><?php echo EXP34?></li>
+									<li class="list-exp"><i class="fa fa-caret-right pr-10 text-colored-white"></i><?php echo EXP35?></li>
+									<li class="list-exp"><i class="fa fa-caret-right pr-10 text-colored-white"></i><?php echo EXP36?></li>
+									<li class="list-exp"><i class="fa fa-caret-right pr-10 text-colored-white"></i><?php echo EXP37?></li>
+									<li class="list-exp"><i class="fa fa-caret-right pr-10 text-colored-white"></i><?php echo EXP38?></li>
+								</ul>
 							</div>
 						</div>
 					</div>
-					<div class="space visible-xs"></div>
-					<div class="col-sm-6">
-						<div class="media">
-							<div class="media-left">
-								<i class="fa fa-leaf"></i>
-							</div>
+					<div class="col-md-6">
+						<div class="media testimonial">
 							<div class="media-body">
-								<h4 class="media-heading"><font color="#000000">Plataforma ESRI</font></i></h4>
-								<p><i><font color="#000000">Ámplio conocimiento de toda la plataforma ESRI</font></i>, desde desktop para la creación de datos, análisis, creación y mantenimiento de bases de datos; pasando por la publicación de servicios en ArcGIS Server, ArcGIS Online, mantenimiento de servicios y servidores; hasta el desarrollo de clientes usando las diferentes APIs y SDKs propios de ESRI.</p>
+								<h3 style="margin-left: 2rem;" class="media-heading"><font ><?php echo EXP19?></font></h3>
+								<div class="space"></div>
+								<ul class="list-unstyled">
+									<li class="list-exp"><i class="fa fa-caret-right pr-10 text-colored-white"></i><?php echo EXP20?><a href="https://joanpere.gitbook.io/tecnologia-lidar/" target="_blank"><?php echo EXP21?></a> (2010)</li>
+									<li class="list-exp"><i class="fa fa-caret-right pr-10 text-colored-white"></i><?php echo EXP22?><?php echo EXP23?> (2014)</li>
+									<li class="list-exp"><i class="fa fa-caret-right pr-10 text-colored-white"></i><?php echo EXP24?><?php echo EXP25?> (2014)</li>
+								</ul>
 							</div>
 						</div>
-						<div class="media">
-							<div class="media-left">
-								<i class="fa fa-area-chart"></i>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading"><font color="#000000">Capacidades personales y profesionales</font></i></h4>
-								<p>Actitud positiva hacia el trabajo; facilidad para la comunicación; capacidad de análisis y resolución de problemas; y gran adaptabilidad.</p>
-							</div>
-						</div>
-						<div class="media">
-							<div class="media-left">
-								<i class="fa fa-child"></i>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading"><font color="#000000">Premios</font></i></h4>
-										<li><i><font color="#000000">Premio XII edición Premios Bancaja</font></i>, por el trabajo fin de carrera: "TECNOLOGÏA LIDAR. PLANIFICACIÖN DE VUELOS, PROCESADO Y POST_PROCESADO DE DATOS".</li>
-										<li><i><font color="#000000">Geo Developers Code Challenge, Premio Especial Lunacloud</font></i>, por la aplicación "PARKING NOW"</li>
-										<li><i><font color="#000000">Geo Developers Code Challenge, Premio al Mejor Proyecto Social</font></i>, por la aplicación "BICICAS-RENFE TRIP PLANER"</li>
+					</div>
 
-							</div>
-						</div>
-						<!-- <div class="media">
-							<div class="media-left">
-								<i class="fa fa-codepen"></i>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading">Service 8</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur quo quis exercitationem reprehenderit dolor vel ducimus, voluptate eaque suscipit iste placeat.</p>
-							</div>
-						</div> -->
-					</div>
+
 				</div>
 			</div>
 		</div>
+	</div>
 		<!-- section end -->
 
 		<!-- section start -->
@@ -368,7 +400,45 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
-						<h2 class="text-center"><font size=18>Colaboramos?</font></h2>
+						<h2 class="text-center"><font size=18><?php echo COLABORAMOS?></font></h2>
+					</div>
+				</div>
+				<div class="row">
+					<p><?php echo PROYECTOS?></p>
+
+				</div>
+				<div class="list-horizontal">
+					<div class="row d-flex">
+						<div class="col-xs-2 align-self-center">
+							<div class="list-horizontal-item">
+								<img  class="img-thumbnail" src="images/empresas/apeam.png" alt="apeam" title="Asociación de Productores y Empaquetadores de Aguacates de México, APEAM">
+							</div>
+						</div>
+						<div class="col-xs-2 align-self-center">
+							<div class="list-horizontal-item">
+								<img class="img-thumbnail"  src="images/empresas/USDAcolor.png" alt="usda"  title="Unites States Department of Agriculture, USDA">
+							</div>
+						</div>
+						<div class="col-xs-2 align-self-center">
+							<div class="list-horizontal-item">
+								<img  class="img-thumbnail" src="images/empresas/autgc.png" alt="Autoridad Única del Transporte de Gran Canaria, AUTGC" title="Autoridad Única del Transporte de Gran Canaria, AUTGC">
+							</div>
+						</div>
+						<div class="col-xs-2 align-self-center">
+							<div class="list-horizontal-item">
+								<img  class="img-thumbnail" src="images/empresas/gull.png" alt="Gerencia de Urbanismo de La Laguna" title="Gerencia de Urbanismo de La Laguna, GULL">
+							</div>
+						</div>
+						<div class="col-xs-2 align-self-center">
+							<div class="list-horizontal-item">
+								<img  class="img-thumbnail" src="images/empresas/pd_logo.png" alt="Harvard Extension School" title="Harvard Extension School">
+							</div>
+						</div>
+						<div class="col-xs-2 align-self-center">
+							<div class="list-horizontal-item">
+								<img  class="img-thumbnail" src="images/empresas/aytolpgc.png" alt="Ayuntamiento de Las Palmas de Gran Canaria" title="Ayuntamiento de Las Palmas de Gran Canaria">
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -381,8 +451,8 @@
 			<div class="container">
 				<h2 class="text-center title" id="portfolio"><font size=18>Portfolio</font></h2>
 				<div class="separator"></div>
-				<p class="lead text-center">Estos son algunos de mis trabajos o proyectos en los que he colaborado.</p>
-				<br>			
+				<p class="lead text-center"><?php echo PORTFOLIO1?></p>
+				<br>
 				<div class="row object-non-visible" data-animation-effect="fadeIn">
 					<div class="col-md-12">
 
@@ -392,7 +462,8 @@
 								<li class="active"><a href="#" data-filter="*">All</a></li>
 								<li><a href="#" data-filter=".web-development">Web development</a></li>
 								<li><a href="#" data-filter=".app-development">App development</a></li>
-								<li><a href="#" data-filter=".otros">Otros</a></li>
+								<li><a href="#" data-filter=".otros"><?php echo PORTFOLIO2?></a></li>
+								<li><a href="#" data-filter=".proyectos"><?php echo PORTFOLIO2a?></a></li>
 							</ul>
 						</div>
 						<!-- isotope filters end -->
@@ -419,18 +490,18 @@
 												<h4 class="modal-title" id="project-1-label">UJI Smart Campus Web</h4>
 											</div>
 											<div class="modal-body">
-												<h3>Descripción del proyecto</h3>
+												<h3><?php echo PORTFOLIO?></h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>La web desarrollada para el Smart Campus de la Universitat Jaume I (UJI) es el portal web del Smart Campus de la UJI: <a href="http://smart.uji.es/" target="_blank"> <b><i>http://smart.uji.es</i></b></a></p>
-														<p>Es el portal web de la <b>plataforma UJI SmartCampus</b>. Esta plataforma consta de un gis con toda la información del campus; servicios para acceder a estos datos; servicios para acceder a la base de datos institucional y otros servicios funcionales. Este portal no es solo un visor GIS, ya que además del descubrimiento de información tiene diversas funcionalidades útiles para ayudar a los usuarios del campus. La funcionalidad GIS desarrollada en el portal se ha implementado mendiante la <b><font color="#429DF2">API de JavaScript de ArcGIS</font></b>.</p>
-														<p>Para esta aplicación se desarrollaron servicios de <b>MapService, FeatureService y Network Analysis Service</b> con <b><font color="#429DF2">ArcGIS Server</font></b>, para los mapas y para el cálculo de rutas.</p>
-														<p>Entre sus funcionalidades a destacar encontramos:</p>
+														<p><?php echo PORTFOLIO3?><a href="http://smart.uji.es/" target="_blank"> <b><i>http://smart.uji.es</i></b></a></p>
+														<p><?php echo PORTFOLIO4?><b><?php echo PORTFOLIO5?></b><?php echo PORTFOLIO6?><b><font color="#429DF2"><?php echo PORTFOLIO7?></font></b>.</p>
+														<p><?php echo PORTFOLIO8?><b><?php echo PORTFOLIO9?></b><?php echo PORTFOLIO10?><b><font color="#429DF2"><?php echo PORTFOLIO11?></font></b><?php echo PORTFOLIO12?></p>
+														<p><?php echo PORTFOLIO13?></p>
 														<ul class="list-unstyled">
-															<li><i class="fa fa-caret-right pr-10 text-colored"></i>    <b>Búsquedas</b>: por despacho, por personal, por departamento, por servicio,...</li>
-															<li><i class="fa fa-caret-right pr-10 text-colored"></i>    <b>Rutas en interiores y exteriores</b></li>
-															<li><i class="fa fa-caret-right pr-10 text-colored"></i>    Visualización <b>consumos energéticos</b></li>
-															<li><i class="fa fa-caret-right pr-10 text-colored"></i>    Visualización en <b>3D</b></li>
+															<li><i class="fa fa-caret-right pr-10 text-colored"></i>    <b><?php echo PORTFOLIO14?></b><?php echo PORTFOLIO15?></li>
+															<li><i class="fa fa-caret-right pr-10 text-colored"></i>    <b><?php echo PORTFOLIO16?></b></li>
+															<li><i class="fa fa-caret-right pr-10 text-colored"></i><?php echo PORTFOLIO17?><b><?php echo PORTFOLIO18?></b></li>
+															<li><i class="fa fa-caret-right pr-10 text-colored"></i><?php echo PORTFOLIO19?><b>3D</b></li>
 													</div>
 													<div class="col-md-6">
 														<a href="http://smart.uji.es/" target="_blank"><img src="images/smartcampus.png" alt="UJI Smart Campus"></a>
@@ -466,19 +537,19 @@
 												<h4 class="modal-title" id="project-2-label">UJI Smart Campus App</h4>
 											</div>
 											<div class="modal-body">
-												<h3>Project Description</h3>
+												<h3><?php echo PORTFOLIO?></h3>
 												<div class="row">
 													<div class="col-md-6">
 														<p> <a href="https://play.google.com/store/apps/details?id=es.uji.smartuji.base" target="_blank"><b><font color="#429DF2">UJI Smart Campus App</font></b></a>, es la app nativa de Android de la plataforma de <b>Smart Campus de la UJI</b>. Esta app está diseñada para que sea una herramienta útil tanto para los estudiantes de la Universitat Jaume I como para el personal.</p>
-														<p>Entre sus funcionalidades destacan:</p>
+														<p><?php echo PORTFOLIO20?></p>
 														<ul>
-															<li><b>Navegación</b> en el mapa por el interior de los edificios</li>
-															<li>Descubrimiento en el mapa de Oficinas, despachos, aulas, servicios universitarios,...</li>
-															<li><b>Buscador</b>: despachos, aulas, personal universitario,...</li>
-															<li><b>Rutas en exteriores e interiores</b></li>
-															<li><b>Sistema de posicionamiento en Interiores y exteriores</b></li>
+															<li><b><?php echo PORTFOLIO21?></b><?php echo PORTFOLIO22?></li>
+															<li><?php echo PORTFOLIO23?></li>
+															<li><b><?php echo PORTFOLIO24?></b><?php echo PORTFOLIO25?></li>
+															<li><b><?php echo PORTFOLIO26?></b></li>
+															<li><b><?php echo PORTFOLIO27?></b></li>
 														</ul>
-														<p>Para su implementación se ha utilizado el  <b><font color="#429DF2">SDK de ArcGIS para Android</font></b>.</p>
+														<p><?php echo PORTFOLIO28?><b><font color="#429DF2"><?php echo PORTFOLIO29?></font></b>.</p>
 														<div align=center>
 															<a href="https://play.google.com/store/apps/details?id=es.uji.smartuji.base" target="_blank"><img src="images/gplay.png" alt="Google Play" width='120' ></a>
 														</div>
@@ -500,7 +571,7 @@
 								</div>
 								<!-- Modal end -->
 							</div>
-							
+
 							<div class="col-sm-6 col-md-3 isotope-item web-development">
 								<div class="image-box">
 									<div class="overlay-container">
@@ -521,18 +592,18 @@
 												<h4 class="modal-title" id="project-3-label">Bicicas-Renfe Trip Planner</h4>
 											</div>
 											<div class="modal-body">
-												<h3>Project Description</h3>
+												<h3><?php echo PORTFOLIO?></h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Este proyecto consite en la integración del servicio de préstamo de bicicletas de Castelló de la Plana y el servicio de trenes de Renfe.</p>
-														<p>Para su desarrollo se ha utilizado el <b><font color="#429DF2">API de JavaScript de ESRI</font></b>. La aplicación hace lo siguiente:
+														<p><?php echo PORTFOLIO30?></p>
+														<p><?php echo PORTFOLIO31?><b><font color="#429DF2"><?php echo PORTFOLIO32?></font></b><?php echo PORTFOLIO33?>
 														<ol>
-															<li>Calcula la ruta más corta hasta la estación de bicicletas más cercana con bicicletas disponibles (teniendo en cuenta que después se quiere ir a la estación de tren)</li>
-															<li>Calcula la ruta hasta la estación de tren</li>
-															<li>Muestra los horarios de trenes a partir del tiempo que se tarda en llegar a la estación.</li>
+															<li><?php echo PORTFOLIO34?></li>
+															<li><?php echo PORTFOLIO35?></li>
+															<li><?php echo PORTFOLIO36?></li>
 														</ol>
 														</p>
-														<p>Esta web app ha sido premiada en el concurso <b><font color="#429DF2">Geo Developers Code Challenge al Mejor Proyecto Social.</font></b></p>
+														<p><?php echo PORTFOLIO37?><b><font color="#429DF2"><?php echo PORTFOLIO38?></font></b></p>
 													</div>
 													<div class="col-md-6">
 														<img src="images/Bicicas2.png" alt="BiciCas-Renfe Trip Planner">
@@ -547,7 +618,7 @@
 								</div>
 								<!-- Modal end -->
 							</div>
-							
+
 							<div class="col-sm-6 col-md-3 isotope-item app-development">
 								<div class="image-box">
 									<div class="overlay-container">
@@ -568,16 +639,16 @@
 												<h4 class="modal-title" id="project-4-label">Agile2014 App</h4>
 											</div>
 											<div class="modal-body">
-												<h3>Project Description</h3>
+												<h3><?php echo PORTFOLIO?></h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>La <a href="https://play.google.com/store/apps/details?id=es.uji.smartuji.agile" target="_blank"><b><font color="#429DF2">app de AGILE 2014</font></b></a> fue desarrollada para ser una herramienta de ayuda para los asistentes al congreso de AGILE que se celebró en la Universitat Jaume I en 2014.</p>
-														<p>Esta herramienta está desarrollada con el <b><font color="#429DF2">SDK de ESRI para Andoid</font></b> sobre la plataforma de <b> UJI Smart Campus</b> reutilizando datos y servicios de la misma.</p>
-														<p>Las funcionalidades que la hacen característica son:</p>
+														<p><?php echo PORTFOLIO39?><a href="https://play.google.com/store/apps/details?id=es.uji.smartuji.agile" target="_blank"><b><font color="#429DF2"><?php echo PORTFOLIO40?></font></b></a><?php echo PORTFOLIO41?></p>
+														<p><?php echo PORTFOLIO42?><b><font color="#429DF2"><?php echo PORTFOLIO43?></font></b><?php echo PORTFOLIO44?><b><?php echo PORTFOLIO45?></b><?php echo PORTFOLIO46?></p>
+														<p><?php echo PORTFOLIO47?></p>
 														<ul>
-															<li><b>Agenda</b> de la conferencia</li>
-															<li><b>Buscador sobre la agenda</b></li>
-															<li><b>Posicionamiento en interiores</b></li>
+															<li><b><?php echo PORTFOLIO48?></b><?php echo PORTFOLIO49?></li>
+															<li><b><?php echo PORTFOLIO50?></b></li>
+															<li><b><?php echo PORTFOLIO50b?></b></li>
 														</ul>
 														<div align=center>
 															<a href="https://play.google.com/store/apps/details?id=es.uji.smartuji.agile" target="_blank"><img src="images/gplay.png" alt="Google Play" width='120' ></a>
@@ -597,7 +668,7 @@
 								</div>
 								<!-- Modal end -->
 							</div>
-							
+
 							<div class="col-sm-6 col-md-3 isotope-item app-development">
 								<div class="image-box">
 									<div class="overlay-container">
@@ -618,11 +689,11 @@
 												<h4 class="modal-title" id="project-5-label">Bus Castellón</h4>
 											</div>
 											<div class="modal-body">
-												<h3>Project Description</h3>
+												<h3><?php echo PORTFOLIO?></h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Esta aplicación muestra a tiempo real el horario de los autobuses públicos de Castellón. Pulsando sobre cualquier parada, muestra abajo la información de los dos próximos autobuses a esa parada. El tiempo no es el horario de los autobuses, sino que se conecta a un servicio que ofrece el tiempo de espera a tiempo real.</p>
-														<p>Esta app ha sido desarrollada para Android, usando el <b><font color="#429DF2">API de Google Maps</font></b>.</p>
+														<p><?php echo PORTFOLIO51?></p>
+														<p><?php echo PORTFOLIO52?><b><font color="#429DF2"><?php echo PORTFOLIO53?></font></b>.</p>
 
 														<div align=center>
 															<a href="https://play.google.com/store/apps/details?id=com.ubik.buscas" target="_blank"><img src="images/gplay.png" alt="Google Play" width='120' ></a>
@@ -651,7 +722,7 @@
 											<span>LiDAR</span>
 										</a>
 									</div>
-									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-10">Detección de dolinas con LiDAR</a>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-10"><?php echo PORTFOLIO54?></a>
 								</div>
 								<!-- Modal -->
 								<div class="modal fade" id="project-10" tabindex="-1" role="dialog" aria-labelledby="project-10-label" aria-hidden="true">
@@ -659,14 +730,14 @@
 										<div class="modal-content">
 											<div class="modal-header">
 												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-10-label">Detección de dolinas con LiDAR</h4>
+												<h4 class="modal-title" id="project-10-label"><?php echo PORTFOLIO54?></h4>
 											</div>
 											<div class="modal-body">
-												<h3>Project Description</h3>
+												<h3><?php echo PORTFOLIO?></h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>El objeto de este proyecto fue la identificación de dolinas (sumideros) en la zona de Oskotz. La delimitación de estas dolinas se realizó utilizando la técnica del vuelo LiDAR. Esta tecnología permite la obtención de puntos en el suelo incluso en zonas boscosas. Se necesitaba ubicar estas dolinas, conocer el número que había y el tamaño de estas ya que para delimitar de forma precisa la cuenca hidrográfica se deben de conocer todos los cursos que sigue el agua pluvial.</p>
-														<p>Para este proyecto se realizó la planificación del vuelo para la suficiente densidad de puntos en el terreno; el cálculo de la trayectoria del avión para la georeferenciación de la nube de puntos LiDAR; el procesado y clasificación de los puntos; y por último la obtención de las dolinas mediante un análisis SIG del MDT generado a partir de la nube de puntos.</p>
+														<p><?php echo PORTFOLIO55?></p>
+														<p><?php echo PORTFOLIO56?></p>
 													</div>
 													<div class="col-md-6">
 														<img src="images/dolina2.png" alt="perfil dolina puntos LiDAR">
@@ -681,7 +752,7 @@
 								</div>
 								<!-- Modal end -->
 							</div>
-							
+
 							<div class="col-sm-6 col-md-3 isotope-item app-development">
 								<div class="image-box">
 									<div class="overlay-container">
@@ -702,12 +773,12 @@
 												<h4 class="modal-title" id="project-6-label">Parking Now</h4>
 											</div>
 											<div class="modal-body">
-												<h3>Project Description</h3>
+												<h3><?php echo PORTFOLIO?></h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Parking Now es una plataforma de colaboración ciudadana, en la que se pretende que los ciudadanos situen en el mapa plazas de aparcamiento en las zonas dónde habitualmente aprarquen. La aplicación es capaz de detectar que se ha aparcado en una plaza (previamente mapeada) cambiando el estado de la misma. La app también te calcula la ruta hasta el punto dónde quieras aparcar, haciendo un análisis sobre la disponibilidad de plazas cerca del destino seleccionado. </p>
-														<p>Otra funcionalidad que tiene, es que una vez aparcado el coche, puedes buscarlo gracias a la realidad aumentada.</p>
-														<p>Esta app fue ganadora del <b><font color="#429DF2">Premio Especial Lunacloud en el Geo Developers Code Challenge</font></b>.</p>
+														<p><?php echo PORTFOLIO57?></p>
+														<p><?php echo PORTFOLIO58?></p>
+														<p><?php echo PORTFOLIO59?><b><font color="#429DF2"><?php echo PORTFOLIO60?></font></b>.</p>
 														<div align=center>
 															<a href="https://play.google.com/store/apps/details?id=es.uji.parkingnow" target="_blank"><img src="images/gplay.png" alt="Google Play" width='120' ></a>
 														</div>
@@ -725,7 +796,7 @@
 								</div>
 								<!-- Modal end -->
 							</div>
-							
+
 							<div class="col-sm-6 col-md-3 isotope-item app-development">
 								<div class="image-box">
 									<div class="overlay-container">
@@ -735,7 +806,7 @@
 											<span>App Development</span>
 										</a>
 									</div>
-									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-7">Conferencia Esri 2014</a>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-7"><?php echo PORTFOLIO61?></a>
 								</div>
 								<!-- Modal -->
 								<div class="modal fade" id="project-7" tabindex="-1" role="dialog" aria-labelledby="project-7-label" aria-hidden="true">
@@ -743,15 +814,15 @@
 										<div class="modal-content">
 											<div class="modal-header">
 												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-7-label">Conferencia Esri 2014</h4>
+												<h4 class="modal-title" id="project-7-label"><?php echo PORTFOLIO61?></h4>
 											</div>
 											<div class="modal-body">
-												<h3>Project Description</h3>
+												<h3><?php echo PORTFOLIO?></h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Aplicación de la Conferencia de Esri España del 2014. Esta aplicación fue desarrollada para ser una guía y una herramienta de ayuda para los asistentes a esta conferencia. En la app, se puede encontrar el programa completo de toda la conferencia.</p>
-														<p>Una de las herramientas más destacadas que tiene es un buscador dentro del programa, en el que se pueden filtrar las sesiones por palabras clave, autores,... A todo esto le acompaña una mapa interactivo en el que puedes consultar las charlas que se realizan en cada sala o la sala dónde se realiza la charla que interesa al usuario.</p>
-														<p>Esta app se ha desarrollado para Android utilizando en SDK de ArcGIS para esta plataforma.</p>
+														<p><?php echo PORTFOLIO62?></p>
+														<p><?php echo PORTFOLIO63?></p>
+														<p><?php echo PORTFOLIO63b?></p>
 
 														<div align=center>
 															<a href="https://play.google.com/store/apps/details?id=es.uji.smartuji.esriConference2014" target="_blank"><img src="images/gplay.png" alt="Google Play" width='120' ></a>
@@ -778,7 +849,7 @@
 											<span>LiDAR</span>
 										</a>
 									</div>
-									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-11">Cubicación Salinas con LiDAR</a>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-11"><?php echo PORTFOLIO64?></a>
 								</div>
 								<!-- Modal -->
 								<div class="modal fade" id="project-11" tabindex="-1" role="dialog" aria-labelledby="project-11-label" aria-hidden="true">
@@ -786,14 +857,14 @@
 										<div class="modal-content">
 											<div class="modal-header">
 												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-11-label">Cubicación Salinas con LiDAR</h4>
+												<h4 class="modal-title" id="project-11-label"><?php echo PORTFOLIO64?></h4>
 											</div>
 											<div class="modal-body">
-												<h3>Project Description</h3>
+												<h3><?php echo PORTFOLIO?></h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>El objeto de este trabajo fue el cálculo del movimiento de tierras realizado en la salina de Beriain entre los años 2008 y 2009. Para ello se generó un Modelo Digital del Terreno (MDT) del año 2009 de la zona de trabajo con tecnología LiDAR y se compararó con los modelos de fechas anteriores generados a partir de la información facilitada de años anteriores..</p>
-														<p>EL proyecto consitió en la realización del vuelo LiDAR, el procesado de los datos LiDAR para obtener el MDT, y la realización de un perfil longitudinal y los diferentes perfiles transversales.</p>
+														<p><?php echo PORTFOLIO65?></p>
+														<p><?php echo PORTFOLIO66?></p>
 													</div>
 													<div class="col-md-6">
 														<img src="images/salinas2.png" alt="MDS LiDAR Cubicación Salinas">
@@ -808,7 +879,7 @@
 								</div>
 								<!-- Modal end -->
 							</div>
-							
+
 							<div class="col-sm-6 col-md-3 isotope-item app-development">
 								<div class="image-box">
 									<div class="overlay-container">
@@ -829,17 +900,17 @@
 												<h4 class="modal-title" id="project-8-label">UJI Mobility</h4>
 											</div>
 											<div class="modal-body">
-												<h3>Project Description</h3>
+												<h3><?php echo PORTFOLIO?></h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Esta app está desarrollada con Andorid sobre la plataforma de UJI Smart Campus y se centra en la mobilidad dentro del campus de la Universitat Jaume I. Esta herramienta permite:</p>
+														<p><?php echo PORTFOLIO67?></p>
 														<ul>
-															<li>Cáclular rutas entre dos puntos (en el interior o exterior de los edificios).</li>
-															<li>Cálcular la ruta al restaurante o lugar para comer más cercano.</li>
-															<li>Cálcular la ruta hasta el wc más cercano</li>
-															<li>Cálcular las rutas de emergencia desde cualquier edificio hasta su punto de encuentro.</li>
-															<li>Las rutas se pueden realizar desde la posición del usuario o indicando el punto en el mapa.</li>
-															<li>En los settings se puede indicar que las rutas sean para personas con mobilidad reducida</li>
+															<li><?php echo PORTFOLIO68?></li>
+															<li><?php echo PORTFOLIO69?></li>
+															<li><?php echo PORTFOLIO70?></li>
+															<li><?php echo PORTFOLIO71?></li>
+															<li><?php echo PORTFOLIO72?></li>
+															<li><?php echo PORTFOLIO73?></li>
 														</ul>
 													</div>
 													<div class="col-md-6">
@@ -876,11 +947,11 @@
 												<h4 class="modal-title" id="project-9-label">UJI Parking Real Time App</h4>
 											</div>
 											<div class="modal-body">
-												<h3>Project Description</h3>
+												<h3><?php echo PORTFOLIO?></h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>Esta App permite ver el estado actual (libre, ocupada, solicitada,...) de las plazas de parking de la Universitat Jaume I.</p>
-														<p>Es una app nativa de Android y usa el SDK de ArcGIS para Android. Es una app de GIS a tiempo real. Actualmente los datos de ocupación son simulados por un servicio web. Los datos del simulador emulan la realidad lo más fiel posible a la espera de la sensorización de las plazas de parking de la UJI. Una vez sensorizados el servicio que ofrece la ocupación de las plazas se conectará directamente a los sensores.</p>
+														<p><?php echo PORTFOLIO74?></p>
+														<p><?php echo PORTFOLIO75?></p>
 													</div>
 													<div class="col-md-6">
 														<iframe width="540" height="400" src="https://www.youtube.com/embed/f_mypOvUm4U" frameborder="0" allowfullscreen></iframe>
@@ -906,10 +977,10 @@
 										<img src="images/fundacion.jpg" alt="">
 										<a class="overlay" data-toggle="modal" data-target="#project-12">
 											<i class="fa fa-search-plus"></i>
-											<span>Cartografía Histórica</span>
+											<span><?php echo PORTFOLIO76?></span>
 										</a>
 									</div>
-									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-12">Reprodicción Facsimilar</a>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-12"><?php echo PORTFOLIO77?></a>
 								</div>
 								<!-- Modal -->
 								<div class="modal fade" id="project-12" tabindex="-1" role="dialog" aria-labelledby="project-12-label" aria-hidden="true">
@@ -917,15 +988,15 @@
 										<div class="modal-content">
 											<div class="modal-header">
 												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-12-label">Reprodicción Facsimilar Cartografía Histórica</h4>
+												<h4 class="modal-title" id="project-12-label"><?php echo PORTFOLIO78?></h4>
 											</div>
 											<div class="modal-body">
-												<h3>Project Description</h3>
+												<h3><?php echo PORTFOLIO?></h3>
 												<div class="row">
 													<div class="col-md-6">
-														<p>La <a href="http://www.fglorente.org/memoria.html" target = "_blank">Fundación Fundación Luis Giménez Lorente</a> de cartografía histórica de la Universidad Politécnica de Valencia, cuenta unos fondos cartográficos de capital importancia para la comunidad Universitaria y el público en general del siglo XVI-XVIII.</p>
-														<p>Una de sus actividades fue por una parte la conservación y adecuación. Por otra parte querían realizar una exposición con facsímiles de los originales.</p>
-														<p>Mi tarea fue la de controlar el color mediante la realización de perfiles de los dispositivos de entrada y de salida, de manera que el color se conservara entre los originales y los facsímiles.</p>
+														<p><?php echo PORTFOLIO79?><a href="http://www.fglorente.org/memoria.html" target = "_blank"><?php echo PORTFOLIO80?></a><?php echo PORTFOLIO81?></p>
+														<p><?php echo PORTFOLIO82?></p>
+														<p><?php echo PORTFOLIO83?></p>
 													</div>
 													<div class="col-md-6">
 														<a href="http://www.fglorente.org/memoria.html" target = "_blank"><img src="images/fundacion2.jpg" alt="Facsimil Fundación Giménez Lorente Cartografía Histórica"></a>
@@ -941,9 +1012,173 @@
 								<!-- Modal end -->
 							</div>
 
+<!--EXPEDIENTES URBANISTICOS-->
+							<div class="col-sm-6 col-md-3 isotope-item proyectos">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/gull.png" alt="Expedientes urbanísticos de la Gerencia de Urbanismo de La Laguna">
+										<a class="overlay" data-toggle="modal" data-target="#project-13">
+											<i class="fa fa-search-plus"></i>
+											<span><?php echo PORTFOLIO2a?></span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-13"><?php echo PORTFOLIO90?></a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-13" tabindex="-1" role="dialog" aria-labelledby="project-13-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-13-label"><?php echo PORTFOLIO91?></h4>
+											</div>
+											<div class="modal-body">
+												<h3><?php echo PORTFOLIO?></h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p><?php echo PORTFOLIO92?></p>
+														<p><?php echo PORTFOLIO93?></p>
+														<p><?php echo PORTFOLIO94?></p>
+													</div>
+													<div class="col-md-6">
+														<a href="http://www.gerenciaurbanismo.com/gerencia/GERENCIA/published/DEFAULT/" target = "_blank"><img src="images/gull.png" alt="Expedientes urbanísticos de la Gerencia de Urbanismo de La Laguna"></a>
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+<!--AUTGC-->
+							<div class="col-sm-6 col-md-3 isotope-item proyectos">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/autgc2.png" alt="AUTGC paradas de Guaguas">
+										<a class="overlay" data-toggle="modal" data-target="#project-14">
+											<i class="fa fa-search-plus"></i>
+											<span><?php echo PORTFOLIO2a?></span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-14"><?php echo PORTFOLIO95?></a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-14" tabindex="-1" role="dialog" aria-labelledby="project-14-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-14-label"><?php echo PORTFOLIO96?></h4>
+											</div>
+											<div class="modal-body">
+												<h3><?php echo PORTFOLIO?></h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p><?php echo PORTFOLIO97?><a href="http://www.autgc.org/transporte-en-gc/intercambiadores-paradas-preferentes-y-l%C3%ADneas" target = "_blank">Autoridad Única del Transporte de Gran Canaria (AUTGC) </a><?php echo PORTFOLIO98?></p>
+														<p><?php echo PORTFOLIO99?></p>
+														<p><?php echo PORTFOLIO100?></p>
+													</div>
+													<div class="col-md-6">
+														<a href="http://www.autgc.org/transporte-en-gc/intercambiadores-paradas-preferentes-y-l%C3%ADneas" target = "_blank"><img src="images/autgc2.png" alt="Aplicación 3D de las paradas de Guaguas de la AUTGC"></a>
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+<!--HARVARD-->
+							<div class="col-sm-6 col-md-3 isotope-item proyectos">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/harvard.png" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-15">
+											<i class="fa fa-search-plus"></i>
+											<span><?php echo PORTFOLIO2a?></span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-15">HARVARD</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-15" tabindex="-1" role="dialog" aria-labelledby="project-15-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-15-label">HARVARD EXTENDED SCHOOL</h4>
+											</div>
+											<div class="modal-body">
+												<h3><?php echo PORTFOLIO?></h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p><?php echo PORTFOLIO101?><a href="https://scholar.harvard.edu/sustainabletourism/courses" target = "_blank">Harvard Extended School </a><?php echo PORTFOLIO102?></p>
+														<p><?php echo PORTFOLIO103?></p>
+														<p><?php echo PORTFOLIO104?></p>
+													</div>
+													<div class="col-md-6">
+														<a href="https://scholar.harvard.edu/sustainabletourism/courses" target = "_blank"><img src="images/harvard2.png" alt="Facsimil Fundación Giménez Lorente Cartografía Histórica"></a>
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+<!--CALLEJERO LAS PALMAS-->
+							<div class="col-sm-6 col-md-3 isotope-item proyectos">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/callejero.png" alt="Aplicaicón del Callejero de Las Palmas de Gran Canaria">
+										<a class="overlay" data-toggle="modal" data-target="#project-16">
+											<i class="fa fa-search-plus"></i>
+											<span><?php echo PORTFOLIO2a?></span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-16"><?php echo PORTFOLIO105?></a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-16" tabindex="-1" role="dialog" aria-labelledby="project-16-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-16-label"><?php echo PORTFOLIO106?></h4>
+											</div>
+											<div class="modal-body">
+												<h3><?php echo PORTFOLIO?></h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p><?php echo PORTFOLIO107?></p>
+														<p><?php echo PORTFOLIO108?></p>
+													</div>
+													<div class="col-md-6">
+														<a href="" target = "_blank"><img src="images/callejero2.png" alt="Aplicaicón del Callejero de Las Palmas de Gran Canaria"></a>
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
 						</div>
 						<!-- portfolio items end -->
-					
+
 					</div>
 				</div>
 			</div>
@@ -954,7 +1189,7 @@
 		<!-- ================ -->
 		<div class="section translucent-bg bg-image-2 pb-clear">
 			<div class="container object-non-visible" data-animation-effect="fadeIn">
-				<h2 id="clients" class="title text-center"><font size=18>Tecnologías</font></h2>
+				<h2 id="clients" class="title text-center"><font size=18><?php echo TECNOLOGIAS?></font></h2>
 				<div class="space"></div>
 				<div class="row">
 					<div class="col-md-4">
@@ -965,12 +1200,13 @@
 							<div class="media-body">
 								<h3 class="media-heading">GIS</h3>
 									<ul class="list-unstyled">
-										<li><i class="fa fa-caret-right pr-10 text-colored"></i>ArcGIS for Desktop</li>
+										<li><i class="fa fa-caret-right pr-10 text-colored"></i>ArcGIS Enterprise</li>
 										<li><i class="fa fa-caret-right pr-10 text-colored"></i>ArcGIS for Server</li>
+										<li><i class="fa fa-caret-right pr-10 text-colored"></i>Portal for ArcGIS</li>
 										<li><i class="fa fa-caret-right pr-10 text-colored"></i>ArcGIS Online</li>
-										<li><i class="fa fa-caret-right pr-10 text-colored"></i>GvSIG</li>
-										<li><i class="fa fa-caret-right pr-10 text-colored"></i>QGIS</li>
-										<li><i class="fa fa-caret-right pr-10 text-colored"></i>Global Mapper</li>
+										<li><i class="fa fa-caret-right pr-10 text-colored"></i>ArcGIS for Desktop</li>
+										<li><i class="fa fa-caret-right pr-10 text-colored"></i>Oracle</li>
+										<li><i class="fa fa-caret-right pr-10 text-colored"></i>SQL Server</li>
 										<li><i class="fa fa-caret-right pr-10 text-colored"></i>PostgreSQL</li>
 									</ul>
 							</div>
@@ -984,14 +1220,13 @@
 							<div class="media-body">
 								<h3 class="media-heading">Developer</h3>
 								<ul class="list-unstyled">
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>JavaScript</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>Python</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>HTML & CSS</li>
 									<li><i class="fa fa-caret-right pr-10 text-colored"></i>Android</li>
 									<li><i class="fa fa-caret-right pr-10 text-colored"></i>Java</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i>JavaScript</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i>Php</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i>html,css,..</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i>Visual Basic</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i>C++</li>
 									<li><i class="fa fa-caret-right pr-10 text-colored"></i>C#</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>Php</li>
 									<li><i class="fa fa-caret-right pr-10 text-colored"></i>SQL</li>
 								</ul>
 							</div>
@@ -1003,80 +1238,23 @@
 								<img src="images/testimonial-3.png" alt="">
 							</div>
 							<div class="media-body">
-								<h3 class="media-heading">Geomática</h3>
+								<h3 class="media-heading"><?php echo GEOMATICA?></h3>
 								<ul class="list-unstyled">
 									<li><i class="fa fa-caret-right pr-10 text-colored"></i>MicroStation</li>
 									<li><i class="fa fa-caret-right pr-10 text-colored"></i>Autocad</li>
 									<li><i class="fa fa-caret-right pr-10 text-colored"></i>TerraSolid</li>
 									<li><i class="fa fa-caret-right pr-10 text-colored"></i>ENVI</li>
 									<li><i class="fa fa-caret-right pr-10 text-colored"></i>ERDAS</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i>Visual Basic</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i>Matlab</li>
-									<li><i class="fa fa-caret-right pr-10 text-colored"></i>Eclipse</li>
 									<li><i class="fa fa-caret-right pr-10 text-colored"></i>Android Studio</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i>Visual Studio</li>
 									<li><i class="fa fa-caret-right pr-10 text-colored"></i>GIT</li>
 
-									</ul>
+								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="media testimonial">
-							<div class="media-left">
-								<img src="images/testimonial-2.png" alt="">
-							</div>
-							<div class="media-body">
-								<h3 class="media-heading">Cursos ESRI</h3>
-								<ul >
-									<li>ArcGIS Server. Compartir contenido GIS en la web</li>
-									<li>Configuración y Administración de ArGIS Server</li>
-									<li>Implementar flujos de trabajo de versionado en una geodatabase multiusuario</li>
-									<li></i>Distribución de datos usando la replicación de la geodatabase</li>
-								</ul>
 
-								
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="media testimonial">
-							<div class="media-left">
-								<img src="images/testimonial-3.png" alt="">
-							</div>
-							<div class="media-body">
-								<h3 class="media-heading">ESRI Formación</h3>
-								<ul>
-									<li>Aprende a realizar análisis de red con ArcGIS</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="media testimonial">
-							<div class="media-left">
-								<img src="images/testimonial-1.png" alt="">
-							</div>
-							<div class="media-body">
-								<h3 class="media-heading">ESRI web course</h3>
-								<ul>
-									<li>Getting Started with Geodatabase Topology</li>
-									<li>Authoring Web Maps Using ArcGIS Online</li>
-									<li>Using Lidar Data in ArcGIS 10</li>
-									<li>Managing Lidar Data Using LAS Datasets</li>
-									<li>Creating and Sharing Locator Packages for ArcGIS 10.1</li>
-									<li>Managing Lidar Data in ArcGIS 10</li>
-									<li>Creating and Editing Labels and Annotation</li>
-									<li>Creating 3D Data Using ArcGIS 10</li>
-									<li>Advanced Techniques for Cartographic Representations</li>
-									<li>3D Visualization Techniques Using ArcGIS 10</li>
-									<li>Introduction to the ArcGIS for Server REST API</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 			<!-- section start -->
 			<!-- ================ -->
@@ -1084,32 +1262,37 @@
 				<div class="container">
 					<div class="list-horizontal">
 						<div class="row">
-							<div class="col-xs-2">
+							<div class="col-xs-1">
 								<div class="list-horizontal-item">
 									<img src="images/esri.png" alt="esri">
 								</div>
 							</div>
-							<div class="col-xs-2">
+							<div class="col-xs-1">
 								<div class="list-horizontal-item">
 									<img src="images/js.png" alt="JavaScript">
 								</div>
 							</div>
-							<div class="col-xs-2">
+							<div class="col-xs-1">
+								<div class="list-horizontal-item">
+									<img src="images/client-7.png" alt="Python">
+								</div>
+							</div>
+							<div class="col-xs-1">
 								<div class="list-horizontal-item">
 									<img src="images/client-3.png" alt="client">
 								</div>
 							</div>
-							<div class="col-xs-2">
+							<div class="col-xs-1">
 								<div class="list-horizontal-item">
 									<img src="images/client-4.png" alt="client">
 								</div>
 							</div>
-							<div class="col-xs-2">
+							<div class="col-xs-1">
 								<div class="list-horizontal-item">
 									<img src="images/java.png" alt="Java">
 								</div>
 							</div>
-							<div class="col-xs-2">
+							<div class="col-xs-1">
 								<div class="list-horizontal-item">
 									<img src="images/client-6.png" alt="Android">
 								</div>
@@ -1133,28 +1316,26 @@
 
 			<!-- .footer start -->
 			<!-- ================ -->
-			<div class="footer section">
+			<div class="footer section end-section">
 				<div class="container">
-					<h2 class="title text-center" id="contact"><font size=18>¿En que te puedo ayudar?</font></h2>
+					<h2 class="title text-center" id="contact"><font size=18><?php echo AYUDAR1?></font></h2>
 					<div class="space"></div>
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="footer-content">
-								<p class="large">Si tienes una oferta de trabajo, propuesta o cualquier consulta ponte en contacto conmigo.</p>
+								<p class="large"><?php echo AYUDAR2?></p>
 								<ul class="list-icons">
-									<li><i class="fa fa-map-marker pr-10"></i><a target="_blank" href="http://smart.uji.es/index.php?room=UB1518SD"> Universitat Jaume I<br> Espaitec 2; 5th floor; UB1518 office</a></li>
-									<li><i class="fa fa-phone pr-10"></i> +34 645349703</li>
-									<!-- <li><i class="fa fa-fax pr-10"></i> +00 1234567891 </li> -->
-									<li><i class="fa fa-envelope-o pr-10"></i> joanperenules@gmail.com</li>
+									<li><i class="fa fa-map-marker pr-10"></i><a target="_blank" href="https://joanpere-gis.maps.arcgis.com/apps/webappviewer/index.html?id=a003bf964ced450a8978d9eadea7d469&find=nules"> Nules</a></li>
+									<li><style>.embed-container {position: relative; padding-bottom: 50%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class="embed-container"><iframe width="300" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Nules" src="//joanpere-gis.maps.arcgis.com/apps/Embed/index.html?webmap=e78fd8b4502647db8b268b4face8dab4&extent=-0.3252,39.7671,0.0357,39.9208&home=true&zoom=true&previewImage=false&scale=false&disable_scroll=true&theme=light"></iframe></div></li>
+									<li><i class="fa fa-envelope-o pr-10"></i><a target="_blank" href="mailto:joanperenules@gmail.com">joanperenules@gmail.com</a> </li>
 								</ul>
-								<ul class="social-links">
+								<ul class="social-links" id="social-links">
 									<!-- <li class="facebook"><a target="_blank" href="https://www.facebook.com/joan.p.awi"><i class="fa fa-facebook"></i></a></li> -->
 									<li class="twitter"><a target="_blank" href="https://twitter.com/JoanPereNules"><i class="fa fa-twitter"></i></a></li>
-									<li class="googleplus"><a target="_blank" href="https://plus.google.com/+JoanAvarientoVicent/posts"><i class="fa fa-google-plus"></i></a></li>
 									<!-- <li class="skype"><a target="_blank" href="http://www.skype.com"><i class="fa fa-skype"></i></a></li> -->
 									<li class="linkedin"><a target="_blank" href="https://es.linkedin.com/in/joanpereavariento"><i class="fa fa-linkedin"></i></a></li>
-<!-- 									<li class="youtube"><a target="_blank" href="http://www.youtube.com"><i class="fa fa-youtube"></i></a></li>
-									<li class="flickr"><a target="_blank" href="http://www.flickr.com"><i class="fa fa-flickr"></i></a></li>
+ 									<li class="github"><a target="_blank" href="https://github.com/JoanPere"><i class="fa fa-github"></i></a></li>
+									<!--<li class="flickr"><a target="_blank" href="http://www.flickr.com"><i class="fa fa-flickr"></i></a></li>
 									<li class="pinterest"><a target="_blank" href="http://www.pinterest.com"><i class="fa fa-pinterest"></i></a></li> -->
 								</ul>
 							</div>
@@ -1168,7 +1349,7 @@
 						<div class="col-sm-6">
 							<div class="footer-content">
 								<form role="form" id="footer-form" name="contacto" action="enviado.php" method="POST">
-								
+
 									<div class="form-group has-feedback">
 										<label class="sr-only" for="name">Name</label>
 										<input type="text" class="form-control" id="name" placeholder="Name" name="name" required >
@@ -1184,17 +1365,22 @@
 										<textarea class="form-control" rows="8" id="message" placeholder="Message" name="message" required></textarea>
 										<i class="fa fa-pencil form-control-feedback"></i>
 									</div>
-									
-									
+
+
 									<div class="g-recaptcha" data-sitekey="6LfjgQgTAAAAAMUZrVd6mn97WZlB_t12JFCo03pF" ></div>
-									<input type="submit" value="Send" class="btn btn-default">
+									<input type="submit" value="Submit" class="btn btn-default">
 								</form>
 							</div>
+
 						</div>
-						<!-- <div class="col-sm-6">
+						<!--
+
+
+
+						<div class="col-sm-6">
 							<div class="footer-content">
 								<form role="form" id="footer-form" name="contacto" action="enviado.php" method="POST">
-								
+
 									<div class="form-group has-feedback">
 										<label class="sr-only" for="name2">Name</label>
 										<input type="text" class="form-control" id="name2" placeholder="Name" name="name2" required>
@@ -1215,23 +1401,41 @@
 							</div>
 						</div> -->
 					</div>
+					<div class="row">
+						<div class="subfooter visible-lg-inline">
+							<div class="container end-section" align = "center">
+							<div class="row">
+								<div class="layout-valignmiddle">
+									<div style="max-width: 341px; margin: 0px auto;">
+										<div style="position: relative; padding-top: 100%;">
+											<iframe style="background: transparent !important; position: absolute; left: 0px; top: 0px;" scrolling="no" frameborder="0" allowtransparency="true" width="100%" height="100%" src="//ra.revolvermaps.com/w/6/a/a2.php?i=06tgv6kvj2s&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" >
+
+											</iframe>
+										</div>
+									 </div>
+
+								 </div>
+
+
+
+								<div style="text-align:center; margin:0; padding:0; width:198px;" >
+
+									<a href="http://www.revolvermaps.com/?target=enlarge&amp;i=06tgv6kvj2s&amp;color=429df2&amp;m=0" target="_blank">Large Visitor Globe</a></div>
+
+									<!-- <div class="col-md-12">
+										<p class="text-center">Copyright © 2014 Worthy by <a target="_blank" href="http://htmlcoder.me">HtmlCoder</a>.</p>
+									</div> -->
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!-- .footer end -->
 
 			<!-- .subfooter start -->
 			<!-- ================ -->
-			<div class="subfooter">
-				<div class="container" align = "center">
-				<div class="row">
-				
-					<div style="text-align:center; margin:0; padding:0; width:198px;"><embed src="//ra.revolvermaps.com/f/g.swf" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" wmode="window" allowScriptAccess="always" allowNetworking="all" width="200" height="200" flashvars="m=0&amp;i=06tgv6kvj2s&amp;r=false&amp;v=true&amp;b=429df2&amp;n=false&amp;s=198&amp;c=429df2"></embed><br /><img src="//ra.revolvermaps.com/js/c/06tgv6kvj2s.gif" width="1" height="1" alt="" /><a href="http://www.revolvermaps.com/?target=enlarge&amp;i=06tgv6kvj2s&amp;color=429df2&amp;m=0">Large Visitor Globe</a></div>
-						<!-- <div class="col-md-12">
-							<p class="text-center">Copyright © 2014 Worthy by <a target="_blank" href="http://htmlcoder.me">HtmlCoder</a>.</p>
-						</div> -->
-					</div>
-				</div>
-			</div>
+
 			<!-- .subfooter end -->
 
 		</footer>
@@ -1248,7 +1452,7 @@
 
 		<!-- Isotope javascript -->
 		<script type="text/javascript" src="plugins/isotope/isotope.pkgd.min.js"></script>
-		
+
 		<!-- Backstretch javascript -->
 		<script type="text/javascript" src="plugins/jquery.backstretch.min.js"></script>
 
@@ -1261,8 +1465,13 @@
 		<!-- Custom Scripts -->
 		<script type="text/javascript" src="js/custom.js"></script>
 
-		<!-- Recaptcha Scripts -->
+		<!-- Recaptcha Scripts
 		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<script src="https://www.google.com/recaptcha/api.js?render=6LcSksYUAAAAAIGxDqO-oDYvANw5j0ZrO1FBJWSj"></script>-->
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+
 
 	</body>
 </html>

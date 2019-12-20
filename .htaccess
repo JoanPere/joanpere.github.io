@@ -1,0 +1,17 @@
+
+SetEnv PHP_VER 5_3
+SetEnv REGISTER_GLOBALS 0
+Options +FollowSymLinks
+
+ErrorDocument 404 /notFound.html
+
+RewriteEngine on
+RewriteCond %{QUERY_STRING} lang=en
+RewriteRule ^http://joanperegis.es/$ /en/? [L,R=301]
+
+RewriteCond %{QUERY_STRING} lang=es
+RewriteRule ^http://joanperegis.es/$ /es/? [L,R=301]
+
+RewriteCond %{QUERY_STRING} lang=cat
+RewriteRule ^http://joanperegis.es/$ /cat/? [L,R=301]
+
